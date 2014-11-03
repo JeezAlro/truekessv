@@ -1,0 +1,2036 @@
+@import "nib"
+@import "normalize.styl"
+@import "style.styl"
+@import "select.styl"
+body
+	background white
+	font-size 16px
+	font-family 'Open Sans', sans-serif
+	color #434343
+figure 
+	margin 0
+img
+	vertical-align top
+
+ul
+	margin 0
+	padding 0
+li
+	list-style none
+a
+	font-family 'Open Sans', sans-serif
+	text-decoration none
+input[type="file"]
+	display none
+	&:focus
+		outline none
+button
+	cursor pointer
+.pointer
+	cursor pointer
+.editarPublicado
+.borrarPublicado
+	color #5c5d5d
+.cimagen
+	background rgba(0, 0, 0, .0)
+	position absolute 
+	top 0 
+	bottom 0
+	left 0
+	right 0
+	display block
+	transition all .3s
+	z-index 0
+	overflow hidden
+	&:hover
+		background rgba(0,0,0, .3)
+		.btn
+			background rgba(67, 67, 67, 1)
+.cambiarimagen
+	cursor pointer
+	position absolute
+	top 0
+	bottom 0
+	left 0
+	right 0
+	border-radius 50% 50% 0 0 
+	&.btn
+		background rgba(67, 67, 67, .50)
+		border-bottom none
+		transition all .3s
+		font-weight bold
+		padding 0
+		cursor pointer
+		
+		&:after
+			content "\e609 "
+			font-family: 'icomoon','Open Sans';
+			width 100%
+			line-height 40px
+			display inline-block
+			position absolute
+			color white
+			text-align center
+			top 10%
+			left 0
+			z-index 0
+			font-size 2em
+			font-weight normal
+@keyframes avatar
+	0% {opacity: 0}
+	50% {opacity: 1}
+	100% {opacity: 0}	
+@keyframes avatar2
+	0% {opacity: 1}
+	100% {opacity: 1}	
+	
+.patrocinado
+	width 120px
+	margin 0 auto
+	padding-top 30px
+	position relative
+	overflow-x hidden
+.adsbygoogle
+	width 120px
+	height 600px
+	background #2a80b9
+	position relative
+	&:before
+		content "Patrocinado"
+		height 30px
+		position absolute
+		display block
+		color white
+		bottom 100%
+		left 0
+		right 0
+		background #2a80b9
+		z-index 2	
+.patrohrzc
+	background #2a80b9
+	width auto
+	clear both
+	height 90px
+	display block
+.publicidadhrz
+	width 232px
+	height 90px
+	margin 0 auto
+	overflow hidden
+.publihrz
+	width 234px
+	height 90px
+	&:before
+		display none
+.register
+	width 95%
+	overflow hidden
+	margin 0 auto
+//modos
+.nextImg
+	opacity 0
+	background rgba(0,0,0,.2)
+	color #fff
+	font-size 5em
+	height 1em
+	width 1em
+	right 0
+	top 40%
+	transition all 0.3s
+.provImg
+	opacity 0
+	background rgba(0,0,0,.2)
+	color #fff
+	font-size 5em
+	height 1em
+	width 1em
+	left 0
+	top 40%
+	transition all 0.3s
+.thumbnails
+	margin-top .4em
+	padding-top 5px
+	display block
+	border 4px solid #e5e5e5
+	background #e5e5e5
+	min-height 100px
+	overflow hidden
+	box-sizing border-box
+	text-align center
+.thumbnail
+	position relative
+	cursor pointer
+	border 4px solid transparent
+	width 92px
+	height 92px
+	display inline-block
+	margin-left .5%
+	margin-top .5%
+	line-height 84px
+	box-sizing border-box
+	opacity .7
+	img
+		vertical-align middle
+		max-width 84px
+		max-height 82px
+.thumbnailActive
+	border 4px solid #0082bd
+	opacity 1
+	&:after
+		content ""
+		position absolute
+		border-left 10px solid transparent
+		border-bottom 10px solid #0082bd
+		border-right 10px solid transparent
+		bottom 100%
+		left 32px
+.pricePlublished
+	position relative
+	min-width 50px
+	background #90c626
+	line-height: 40px
+	font-size 2em
+	color #fff
+	left 0
+	text-align center
+	top 0
+	padding .2em
+	
+.contentImgPublished
+	position relative
+	border 4px solid #e5e5e5
+	height 258px
+	background #e5e5e5
+	box-sizing border-box
+	overflow hidden
+	user-select none
+	
+.imgPublished
+	overflow hidden
+	display block
+	box-sizing border-box
+	line-height 200px
+	cursor pointer
+	&:hover 
+		.nextImg
+		.provImg
+			opacity 1
+	img
+		vertical-align middle
+		max-width 100%
+		max-height 200px
+		
+		
+.published
+	box-sizing border-box
+	
+.levelDirectory
+	display block
+	color #35a3e1
+.cambiarUbicacion
+	width 100%
+.textomapa
+	width 450px
+	margin 0 auto
+	padding 0
+	height 41px
+.bienvenido
+	width 100%
+	height auto
+	margin auto
+	margin-top 0
+	background transparent
+	overflow hidden
+	cursor pointer
+.holaregistro
+	background transparent url('../img/categorias/hola.jpg') 0 0 no-repeat
+	background-size 450px 350px
+	display none
+	height 350px
+	margin 0
+	box-sizing border-box
+.ivitacion
+	background #8ac319
+	display block
+	min-height 50px
+	padding .5em 
+	box-sizing border-box
+.categorias
+	background transparent
+	display block
+	overflow hidden
+.categoriaContent
+	background transparent
+	width 48%
+	float left
+	margin-left 1%
+	margin-top .3em
+	padding .5em
+	box-sizing border-box 
+	&:hover
+		background #ecf0f1
+		
+.enlaseCategorias
+	background transparent
+	display block
+	border-bottom 1px solid transparent
+	&:hover
+		border-bottom 1px solid #2190c3
+		
+.enlaseSubCategorias
+	border-bottom 1px solid transparent
+	display block
+	&:hover
+		border-bottom 1px solid #999
+.iconc 
+	background transparent
+	width 100px
+	height 100px
+	margin 0 auto
+.icon-cate01
+	background transparent url('../img/categorias/sprintes-cate.png') 0 0 no-repeat
+	background-size 400px 300px
+.icon-cate02
+	background transparent url('../img/categorias/sprintes-cate.png') -100px 0 no-repeat
+	background-size 400px 300px
+.icon-cate03
+	background transparent url('../img/categorias/sprintes-cate.png') -200px 0 no-repeat
+	background-size 400px 300px
+.icon-cate04
+	background transparent url('../img/categorias/sprintes-cate.png') -300px 0 no-repeat
+	background-size 400px 300px
+.icon-cate05
+	background transparent url('../img/categorias/sprintes-cate.png') 0 -100px no-repeat
+	background-size 400px 300px
+.icon-cate06
+	background transparent url('../img/categorias/sprintes-cate.png') -100px -100px no-repeat
+	background-size 400px 300px
+.icon-cate07
+	background transparent url('../img/categorias/sprintes-cate.png') -200px -100px no-repeat
+	background-size 400px 300px
+.icon-cate08
+	background transparent url('../img/categorias/sprintes-cate.png') -300px -100px no-repeat
+	background-size 400px 300px
+.icon-cate09
+	background transparent url('../img/categorias/sprintes-cate.png') 0px -200px no-repeat
+	background-size 400px 300px
+.icon-cate010
+	background transparent url('../img/categorias/sprintes-cate.png') -100px -200px no-repeat
+	background-size 400px 300px
+.icon-cate011
+	background transparent url('../img/categorias/sprintes-cate.png') -200px -200px no-repeat
+	background-size 400px 300px
+.icon-cate012
+	background transparent url('../img/categorias/sprintes-cate.png') -300px -200px no-repeat
+	background-size 400px 300px
+
+
+
+
+.ubicaciones
+	background transparent
+	display none
+	li
+		a
+			padding .3em 1em
+		&:nth-child(odd)
+			background #e5e5e5
+		&:nth-child(even)
+			background #ecf0f1
+.nomapa
+	display block
+.mapainterac
+	display none
+	
+.mapa
+	background  transparent url('../img/maps/sv/mapasv.png') 0 0 no-repeat
+	background-size 450px 350px
+	width 450px
+	height 350px
+	margin 0 auto
+.cmapa
+	background  transparent
+	width 450px
+	height 350px
+	margin 0 auto
+.sprinter-zone
+	background transparent url('../img/maps/sv/sdep.png') -6300px 0 no-repeat
+	background-size 6750px 350px
+	width 450px
+	height 350px
+.sprinter-zone1
+	background transparent url('../img/maps/sv/sdep.png') 0 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone2
+	background transparent url('../img/maps/sv/sdep.png') -450px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone3
+	background transparent url('../img/maps/sv/sdep.png') -900px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone4
+	background transparent url('../img/maps/sv/sdep.png') -1350px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone5
+	background transparent url('../img/maps/sv/sdep.png') -1800px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone6
+	background transparent url('../img/maps/sv/sdep.png') -2250px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone7
+	background transparent url('../img/maps/sv/sdep.png') -2700px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone8
+	background transparent url('../img/maps/sv/sdep.png') -3150px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone9
+	background transparent url('../img/maps/sv/sdep.png') -3600px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone10
+	background transparent url('../img/maps/sv/sdep.png') -4050px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone11
+	background transparent url('../img/maps/sv/sdep.png') -4500px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone12
+	background transparent url('../img/maps/sv/sdep.png') -4950px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone13
+	background transparent url('../img/maps/sv/sdep.png') -5400px 0 no-repeat
+	background-size 6750px 350px
+.sprinter-zone14
+	background transparent url('../img/maps/sv/sdep.png') -5850px 0 no-repeat
+	background-size 6750px 350px
+.conf
+	margin-left .5em
+.spanf
+	font-size .8em
+.index1
+	position relative
+	z-index 1
+.index2
+	position relative
+	z-index 2
+.selector
+	width 100%
+	float left
+.icon-beneficios
+	color #0082bd
+	font-size 2.8em
+	padding 2%
+.selectnone
+	user-select none
+.tip
+	color #999999
+	width 80%
+	padding 2%
+.pruen
+	background red
+.block
+	display block
+.bold
+	font-weight bold
+.lighter
+	font-weight  lighter
+.normal
+	font-weight normal
+.line44
+	line-height 44px
+.textSmall
+	font-size 1em
+	font-weight lighter
+.textNormal
+	font-size 1em
+	font-weight lighter
+.textLarge
+	font-size 1.5em
+	font-weight lighter
+.text08
+	font-size 0.8em
+.text300
+	font-size 3em
+.textAzulO
+	color #293a4a
+.textGris
+	color #999999
+.textBlanco
+	color #fff
+.textRojo
+	color #e2413e
+.underline
+	text-decoration underline
+.peque
+	margin-left: 1em;
+	margin-top: 0;
+	font-size: .9em;
+.marginTop 
+	margin-top 1em
+.marginBottom
+	margin-bottom 1em
+.marginNone
+	margin 0
+.textAzul
+	color #35a3e1
+.perfil
+	margin 0 auto
+	.info
+		margin 0 
+		.icon-f
+			margin-right 5px
+.descriperfil
+	.title
+		width auto
+		display block
+		height 40px
+		vertical-align top
+		overflow hidden
+
+	.desktop
+		display none
+	.bronce
+	.plata
+	.oro
+		background url('../img/medallam.png')
+		width 40px
+		height 38px
+		position absolute
+		top 0
+		right .4em 
+	.bronce
+		background-position 0 0
+	.plata
+		background-position -40px 0
+	.oro
+		background-position -80px 0
+.nombrePerfil
+	width 80%
+	display inline-block
+	text-align center
+	font-size 1em
+	margin 0 auto
+	font-weight normal
+.border
+	border 1px solid #bec3c7
+.borderBottom
+	border-bottom 1px solid red
+.borderAzul
+	border-color #999999
+.radius	
+	border-radius 50%
+	overflow hidden
+.radius_4
+	border-radius 4px
+	overflow hidden
+.mavaperfil
+	position absolute
+	bottom -50%
+	left 0
+	width 20%
+	max-width 120px
+	display inline-block
+	border-radius 50%
+	vertical-align middle
+	border 3px solid white
+	.mavatar 
+		width 100%
+		border-radius 50%
+.avatarperfil
+		background #ECF0F1
+		display block
+		border-radius 50%
+		position absolute
+		float left
+		overflow hidden
+		width 20%
+		padding 0
+		border 5px solid #fff
+		margin 0 auto
+		margin-top -9%
+		z-index 3
+		.avatar
+			width 100%
+.contentAvatar			
+	border-radius 50%
+	float left
+	overflow hidden
+	padding 0
+	margin 0 auto
+	z-index 3
+
+	.bronce
+	.plata
+	.oro
+		background url('../img/medallap.png')
+		width 27px
+		height 26px
+		position absolute
+		left 4%
+		top 4%
+	.bronce
+		background-position 0 0
+	.plata
+		background-position -27px 0
+	.oro
+		background-position -54px 0
+.contactamed
+	display none
+.bannerPerfil
+	padding 0
+	display block
+	background #ecf0f1
+	position relative
+	overflow hidden
+	.banner
+		width 100%
+	.cambiarimagen
+		top 70%
+		bottom 0%
+	
+		&.btn
+			&:after
+				content "\e609  Cambiar Portada"
+				font-family: 'icomoon','Open Sans';
+				width 100%
+				line-height 40px
+				display inline-block
+				position absolute
+				color white
+				text-align center
+				top 0
+				left 0
+				z-index 0
+				font-size 1em
+				font-weight normal
+.descriperfil
+	background #ecf0f1
+	width auto
+	display block
+	padding-bottom .5em
+	z-index 1
+	.title
+		text-align center
+	.patrocinado
+		display none
+		width 100%
+.opcionesPerfil
+	background #ECF0F1
+	padding-top 10px
+	position relative
+.controlesPerfil
+	background red
+	
+.sobremi
+	display none
+	margin-bottom 0
+.opcionesp
+	float left
+	background yellow
+	width 33.33%
+	text-align center
+	font-weight normal
+	font-size .8em
+	text-transform uppercase
+	padding .5em 0
+	&.btnazul
+		padding 1em 0em
+		font-weight normal
+	&.active
+		background #293a4a
+	
+.resumenpuntos
+	text-align left
+	position relative
+	.bronce
+	.plata
+	.oro
+		background url('../img/medallam.png')
+		width 40px
+		height 38px
+		position inherit
+		display inline-block
+		left 5px
+	.bronce
+		background-position 0 0
+	.plata
+		background-position -40px 0
+	.oro
+		background-position -80px 0
+	.positivo
+	.neutro
+	.negativo
+		margin 0
+		&:after
+			display none
+		&:before
+			display none
+.total
+	font-weight bold
+	font-size 3em
+	color #0082bd
+	position relative
+	text-align center
+	&:after
+		content "Puntos"
+		display block
+		font-size .5em
+		text-align center
+.recuento
+	text-align center
+
+.puntuacion
+	padding .5em 0
+	display inline-block
+	text-align left
+	margin-right 1%
+	width auto
+	border-bottom 2px dashed #0082bd
+	a 
+		color #0082bd
+		font-style italic
+		font-size 1.2em
+	
+.positivo
+	display inline-block
+	background #7cbf42
+	border-bottom 2px solid #30a443
+	padding .2em .5em
+	color white
+	margin-left 10px
+	position relative
+	&:before
+		content "Positiva"
+		display inline-block
+	&:after
+		content ""
+		border-right 10px solid #7cbf42
+		border-bottom 15px solid transparent
+		border-top  15px solid transparent
+		position absolute
+		right 100%
+		top 0
+.neutro
+	display inline-block
+	background #c4cace
+	border-bottom 2px solid #bec3c7
+	padding .2em .5em
+	color white
+	margin-left 10px
+	position relative
+	&:before
+		content "Neutral"
+		display inline-block
+	&:after
+		content ""
+		border-right 10px solid #c4cace
+		border-bottom 15px solid transparent
+		border-top  15px solid transparent
+		position absolute
+		right 100%
+		top 0
+.negativo
+	display inline-block
+	background #e2413e
+	border-bottom 2px solid #e91222
+	padding .2em .5em
+	color white
+	position relative
+	margin-left 10px
+	text-align
+	&:before
+		content "Negativa"
+		display inline-block
+	&:after
+		content ""
+		border-right 10px solid #e2413e
+		border-bottom 15px solid transparent
+		border-top  15px solid transparent
+		position absolute
+		right 100%
+		top 0
+
+.titulo
+.razondepuntos
+	display inline-block
+.titulo
+	color #0082bd
+	margin 0
+.informacion
+	border-bottom 2px solid #0082bd	
+.right
+	float right
+.left 
+	float left	
+.center
+	text-align center
+.relative
+	position relative
+.absolute
+	position absolute
+.active
+	display block	
+.none
+	display none
+.borders
+	border 5px solid #bec3c7
+.bordern
+	border 2px solid #bec3c7
+.border4
+	border 4px solid red
+.bazulclaro
+	border-color #3598dc
+.bgrisclaro
+	border-color #f0f0e6
+.brosa
+	border-color #e51753
+.bnone
+	border none
+.bloque
+	overflow hidden
+	margin 0 auto
+	margin-top .4em
+	display block
+	clear both
+.center
+	text-align center
+.warp
+	background white
+	padding-top 0
+//botones
+.btn
+	display inline-block
+	padding .5em
+	background black
+	border none
+	color #fff
+	span
+		margin-right 5px
+.btnblock
+	display block
+	padding .8em
+	margin 5px 0
+	width auto
+.btn100
+	width 100%
+.btnlogin
+.btnsignin
+	margin-top 1px
+	margin-right 4px
+	padding .7em 1.2em
+.btnlogin
+	font-weight:  bold;
+	background #2dcb6f
+	border-bottom 4px solid #26ac5f
+	transition all .3s
+	opacity .9
+	&:hover
+		opacity 1
+.btnverde
+	background #90c626
+	border-bottom 3px solid #85af1e
+	font-weight bold
+	transition all .3s
+	&:hover
+		background #85af1e
+.btnamarillo
+	background #FF9900
+	border-bottom 3px solid #D55403
+	font-weight bold
+	transition all .3s
+	&:hover
+		background #D55403
+.btnazul
+	background #0082bd
+	border-bottom 3px solid #293a4a
+	transition background .3s
+	font-weight bold
+	padding-right 0.3em
+	padding-left 0.3em
+	&:hover
+		background #293a4a
+.btnMapa
+	background #0082bd
+	border-bottom 3px solid #293a4a
+	transition background .3s
+	height 41px
+	font-weight lighter
+	color #fff
+	font-size 1.4em
+	padding-right 0.3em
+	padding-left 0.3em
+	&:hover
+		background #293a4a
+.btnrojo
+	background #e2413e
+	border-bottom 3px solid #e91222
+	transition all .3s
+	font-weight bold
+	padding-right 0.3em
+	padding-left 0.3em
+	&:hover
+		background #e91222
+.btngris
+	background #abb7b7
+	border-bottom 3px solid #7e8c8d
+	transition all .3s
+	font-weight bold
+	padding-right 0.3em
+	padding-left 0.3em
+	&:hover
+		background #7e8c8d	
+.btnf
+	background #3d5b94
+	border-bottom 3px solid #334a75
+	text-align center
+	font-weight bold
+	transition all .3s
+	&:hover
+		background #334a75
+.btnt
+	background #60aad8
+	border-bottom 3px solid #4884a8
+	text-align center
+	font-weight bold
+	transition all .3s
+	&:hover
+		background #4884a8
+//Header
+
+.header
+	background #e5e5e5
+
+//logo
+.logo
+	background #ecf0f1
+	float left
+	height 3.1em
+	position relative
+	width 35%
+	&:before
+		border-right 50px solid transparent
+		border-top 50px solid #ecf0f1
+		content ""
+		display inline-block
+		left 100%
+		position absolute
+		top 0
+		z-index 4
+.logof
+	margin 0 0 0 .4em 
+	width 6em
+	z-index 5
+	float left
+	position relative
+	display inline-block
+	vertical-align middle
+	img
+		height 35px
+.logo-c
+	margin 0 0 0 .4em 
+	width 10em
+	z-index 5
+	position relative
+	display inline-block
+	vertical-align middle
+	img
+		width 100%
+.logo-l
+	margin 0 0 0 .4em 
+	width 10em
+	z-index 5
+	position relative
+	display block
+	vertical-align middle
+	img
+		width 100%
+
+.login
+	margin 1em auto
+.conten-form
+	background #ecf0f1
+	width 95%
+	max-width 440px
+	padding-bottom 1em
+	margin 1em auto
+	text-align left
+	box-sizing border-box
+	overflow hidden
+.anexo
+	display none
+	width 50%
+	min-height 300px
+	float left
+	
+.conten-formr
+	background #ecf0f1
+	width 100%
+	max-width 480px
+	padding-bottom 1em
+	margin 1em auto
+	text-align left
+	box-sizing border-box
+	display block
+.titleBlock
+	background #0082bd
+	display block
+	text-align left
+	color white
+	font-weight normal
+	padding 0 .4em
+	line-height 2em
+	font-size 1.25em
+	margin 0
+	margin-bottom .5em
+
+.formularioL
+	width 94%
+	margin auto
+
+.inputPublished
+	width 98%
+	background rgba(250, 250, 250, 1)
+	font-size 1.4em
+	border 1px solid #bec3c7
+	transition all .3s
+	&:focus
+		outline none
+		border-color #abb7b7
+		background rgba(250, 250, 250, .4)
+.inputForm
+	width 100%
+	background rgba(250, 250, 250, 1)
+	padding .2em 0em
+	font-size 1.4em
+	border 1px solid #bec3c7
+	transition all .3s
+	box-sizing border-box
+	&:focus
+		outline none
+		border-color #abb7b7
+		background rgba(250, 250, 250, .4)
+.inputFormB
+	width 100%
+	background rgba(226, 65, 62, .2)
+	padding .2em 0em
+	font-size 1.4em
+	border 1px solid #e2413e
+	transition all .3s
+	&:focus
+		outline none
+		border-color #abb7b7
+		background rgba(250, 250, 250, .4)
+//menu de notificaciones	
+.userMenu
+	background #34495e
+	float right
+	height 3.1em
+	text-align right
+	width 65%
+.menu	
+	float right
+	
+	padding 0 .3em
+.publicar
+	background #0082bd
+	padding 0 .5em
+	overflow hidden
+	height 47px
+	margin-right 5px
+	min-width 30px
+	border-bottom 3px solid #293a4a
+	position relative
+	transition all 0.3s
+	&:hover
+		background #293a4a
+		border-bottom 3px solid #293a4a
+.public
+	font-size 1.5em
+	line-height 47px
+	margin-right .4em
+	position absolute
+	left .5em
+.publitext
+	font-size 1.25em
+	line-height 47px
+	padding-left 2em
+	display none
+.notificaciones
+	float left
+	vertical-align middle
+	.active
+		background red	
+.notificacion
+	color white
+	float left
+	font-size 1.5em
+	margin 0
+	padding .55em .2em
+	position relative
+	&:hover
+		background rgba(0,0,0,.2)
+	&.active
+		background rgba(0,0,0,.5)
+	
+.noti
+	background #e23130
+	border-radius 3px
+	font-size .6em
+	padding .1em
+	position absolute
+	right 2px
+	top 2px
+.pop
+	display none
+	background #1a242f
+	width 100%
+	height 268px
+	overflow-y scroll
+	position relative
+	z-index 10
+	clear both
+.mesaje
+	padding 4px
+	height 65px
+	margin 5px 0
+	background #fff
+	border-bottom 1px solid #ecf0f1
+	&:hover
+		background  #ecf0f1
+.emisor
+	display inline-block
+	vertical-align middle
+.mmisor
+	color #434343
+	vertical-align top
+	width 200px
+	overflow hidden
+	height 65px
+	display inline-block
+	&:active
+		color #434343
+		 
+	
+//menu de usurio
+.miavatar
+	border 2px solid white
+	border-radius 50%;
+	float left
+	height 36px;
+	margin-top .3em
+	overflow hidden
+	padding 0
+	width 36px;
+	.submenu
+		display none
+.menuUser
+	background #434343
+	clear  both
+	display none
+.opciones
+	color white
+	display block
+	padding .6em
+	text-align center
+	transition background .3s
+	&:hover
+		background rgba(0, 0, 0, .5)
+//bucar
+.busqueda
+	overflow hidden
+	clear both
+	min-height 3.1em
+.buscar
+	display inline-block
+	width 100%
+	margin-top .3em
+	.text 
+		border none
+		padding 0 0.3em
+		font-size 1.18em
+		font-weight normal
+		color #434343
+		height 38px
+		width 100%;
+		float left
+		box-sizing border-box
+		&:focus
+			outline none
+.select
+	border none
+	font-size 1.18em
+	color #434343
+	height 38px
+	width 70%;
+	float left
+	margin-top .3em
+	box-sizing border-box
+
+	&:focus
+		outline none
+.buscaricon
+	line-height 38px
+	display none
+.textoBuscar
+	line-height 38px
+.btnBuscar
+	text-align center
+	box-sizing border-box
+	border none
+	font-size 1.2em
+	color #434343
+	color #fff
+	width 29%;
+	height 38px
+	margin-left 1%
+	float left
+	margin-top .3em
+	background #0082bd
+	transition background .3s
+	&:hover
+		background #34495e
+.iconobuscar
+	color #434343
+	font-size 1.25em
+	margin .3em .1em
+	right 0
+	top 0
+.iconodelete
+	color #434343
+	font-size 1.25em
+	left 0
+	margin .3em .1em
+	top 0
+		
+.menuMobil
+	background #434343
+	color white
+	float right
+	font-size 1.3em
+	padding .5em
+	position absolute
+	right 0
+	bottom 0
+	&.active
+		background #212121
+		border-radius 50% 50% 0 0
+
+.categoriasMobil
+	background #212121
+	display block
+	clear  both	
+	li
+		.opciones
+			font-family 'icomoon', 'Open Sans'
+			color white
+			display block
+			font-size 1.25em
+			padding .6em
+			text-align center
+			&:hover
+				background rgba(0, 0, 0, .5)
+		.submenuCategorias
+			display none
+			position block
+			left 0
+			right 0
+			top 100%
+			z-index 3
+			background #101010
+			li
+				width auto
+				display block
+				float none
+				.opciones 
+					display block
+					text-align center
+					&:hover
+						background rgba(0, 0, 0, .5)
+	.active
+		background #101010
+.icono-mas:before
+	content "+"
+	background white
+	text-align center
+	position relative
+	font-weight bold
+	margin-right 5px
+	left 0
+	padding 0 .2em
+	font-size 1.35em
+	color #212121
+.icono-menos:before
+	content "-"
+	background white
+	text-align center
+	position relative
+	font-weight bold
+	margin-right 5px
+	padding 0 .32em
+	font-size 1.35em
+	color #212121	
+.categoriasDesktop
+	background #434343
+	display none
+	clear  both	
+	margin 0 auto
+	height 41px
+	z-index 20
+	
+	li
+		float left
+		width 20%
+		position relative
+		&:hover
+			background #212121	
+		.opciones
+			color width
+			display block
+			padding .6em
+			text-align center
+		.submenuCategorias
+			display none
+			position absolute
+			left 0
+			right 0
+			top 100%
+			z-index 3
+			background #212121
+			li
+				width auto
+				display block
+				float none
+				background #212121
+				.opciones 
+					display block
+					text-align left
+					&:hover
+						background rgba(0, 0, 0, .5)
+		&:hover 
+			.submenuCategorias
+				display block				
+
+.mejoresVendedores
+	margin-top .4em
+
+.avatarvendedores	
+	margin-top .4em
+	margin-bottom .4em
+	width 100%;
+	height 95px
+	overflow hidden
+	text-align center
+
+.title
+	width 80%
+	height 42px
+	background #0082bd
+	margin 0
+	padding 0 .4em
+	font-weight normal
+	color white
+	line-height 42px
+	z-index 2
+	&:after
+			border-bottom 21px solid #0082bd
+			border-right 20.5px solid transparent
+			border-top 21px solid #0082bd
+			content ""
+			left 100%
+			position absolute
+	&:before
+		border-bottom 21px solid #0082bd
+		border-left 20.5px solid transparent
+		border-top 21px solid #0082bd
+		content ""
+		position absolute
+		right 100%
+.mejores
+	width 80px
+	height 80px
+	display inline-block
+	.vendedorn
+		background rgba(190, 195, 199, .75)
+		top 80px
+		left 0
+		right 0
+		text-align center
+		line-height 80px
+		transition top .3s
+		color #434343
+	&:hover 
+		.vendedorn 
+			top 0px
+.producto
+	background #ecf0f1
+.grid
+	overflow-y  hidden
+	display inline-block
+	min-height 234px
+	margin-right 0
+	margin-left 1%
+	margin-top .5em
+	width 48%
+	box-sizing border-box
+.nombre
+	color #3598dc
+	margin 0 
+	padding 0
+	font-weight normal
+	font-size 1.25em
+.estado
+.envio
+.vendedor
+.ubicacion	
+	font-size .8em
+	margin 0
+	padding 0
+.precio
+	font-weight bold
+	margin 0
+.agregar
+	right 1em
+	top 0
+	color #e64b3a
+
+.infop
+	padding .2em
+.atributo
+	color #3598dc
+	font-style italic
+	display inline-block
+.imagenp
+	width 100%
+
+.bronce
+.plata
+.oro
+	background url('../img/medallap.png')
+	width 27px
+	height 26px
+	position absolute
+	top 0
+	right .4em 
+.bronce
+	background-position 0 0
+.plata
+	background-position -27px 0
+.oro
+	background-position -54px 0
+.pre-footer
+	background #2a80b9
+	clear both
+	overflow hidden
+.footer
+	background #212121
+	height 42px
+	position absolute
+	left 0
+	right 0
+	margin 0
+	text-align center
+	.opciones
+		display inline-block
+.contacto
+	float right
+	a 
+		text-align left
+		font-size 1em
+		padding .5em
+		color white
+		font-family 'Open Sans', sans-serif,icomoon
+	& a:first-child
+		text-align center
+		color white
+.footerCategorias
+	float left
+	color white
+	text-align center
+.categoriasFooter
+	width auto
+	color white
+	li 
+		display inline-block
+		.opciones
+			text-align left
+			display inline-block		
+
+.none
+	display none
+.active
+	display block	
+	
+.sobremides
+	display none
+.desktop 
+	display none
+.contenedorg
+	background rgba(0, 0, 0, .5)
+	position fixed
+	top 0
+	bottom 0
+	left 0
+	right 0
+	z-index 80
+	display none
+	&.active
+		display block
+.popalert
+	width 90% 
+	background #ecf0f1
+	text-align center
+	position fixed
+	top 20%
+	left 5%
+	padding 0 0 1em 0
+	z-index 100
+	display none
+	.titulo
+		background #0082bd
+		color white
+		line-height 40px
+		text-align left
+		font-weight bold
+		display block
+		padding 0 .3em
+		.cerrar
+			font-size 2em
+			float right
+			cursor pointer
+.popalert
+	width 90% 
+	background #ecf0f1
+	text-align center
+	position fixed
+	top 10%
+	left 5%
+	padding 0 0 1em 0
+	z-index 100
+	.titulo
+		background #0082bd
+		color white
+		line-height 40px
+		text-align left
+		font-weight bold
+		display block
+		padding 0 .3em
+		.cerrar
+			font-size 2em
+			float right
+			cursor pointer
+.mesajenuevo
+	margin 0 auto
+	width 98%
+	bottom 0
+	display block
+	height 200px
+	resize none
+	margin-bottom 5px
+	border none
+	&:focus
+		outline none
+button
+	width 40%
+	border-right none
+	border-top none
+	border-left none
+	display inline-block
+
+.textNormal
+	font-size 1em
+	font-weight lighter
+.textLarge
+	font-size 1.5em
+	font-weight lighter
+.textItalic
+	font-style italic
+.text08
+	font-size 0.8em
+.text300
+	font-size 3em
+.textAzulO
+	color #293a4a
+.textGris
+	color #999999
+.textBlanco
+	color #fff
+.textRojo
+	color #e2413e
+@media screen and (min-width:480px)
+	.grid
+		width 32%
+	.cambiarimagen
+		top 50%
+		bottom 0
+		&.btn
+			&:after
+				content "\e609  Cambiar"
+				font-size 1em
+	
+	.resumenpuntos
+		.positivo
+		.neutro
+		.negativo
+			margin 0
+			&:after
+				display none
+			&:before
+				display inline-block
+	.logof
+		width 146px
+		img
+			height 50px
+	.bronce
+	.plata
+	.oro
+		background url('../img/medallam.png')
+		width 40px
+		height 38px
+		position absolute
+		top 0
+		right .4em 
+	.bronce
+		background-position 0 0
+	.plata
+		background-position -40px 0
+	.oro
+		background-position -80px 0
+	.patrocinado
+		width 120px
+	.adsbygoogle
+		width 120px
+		height 600px
+		position relative
+	  
+	.ase
+		padding 0%
+		width 160px
+		height 60px
+		text-align center
+		margin 0 auto
+		position relative
+	.nombre
+		font-weight normal
+		font-size 1.5em
+	.estado
+	.envio
+	.vendedor
+	.ubicacion	
+		font-size 1em
+		margin 0
+		padding 0
+	.precio
+		font-weight bold
+		margin 0
+		font-size 1.25em
+	.mmisor
+		vertical-align top
+		width 320px
+		overflow hidden
+		height 65px
+		display inline-block
+
+	.contacto
+		float right
+		a 
+			font-size 1.25em
+	.publicidadhrz
+		width 460px
+		height 90px
+		margin 0 auto
+	.publihrz
+		width 460px
+		height 90px
+@media screen and (min-width:510px)
+	.categoriaContent
+		width 32%
+			
+	.enlaseSubCategorias
+		display inline-block
+	.nomapa
+		display none
+	.mapainterac
+		display inherit
+	.title
+		margin 0 auto
+		text-align center
+	.selector
+		width 50%
+		float left
+	.publitext
+		display block
+@media screen and (min-width:610px)
+	.pricePlublished
+		position absolute
+		
+	.contentImgPublished
+		position relative
+		height 350px
+		
+	.imgPublished
+		line-height 350px
+		img 
+			max-width 100%
+			max-height 342px
+	.buscar
+		.text
+			width 52%
+	.select
+		width 32%
+		margin-top 0
+		margin-left .5%
+	.btnBuscar
+		width 15%
+		margin-left .5%
+		margin-top 0
+	.patrocinado
+		width 160px
+	.adsbygoogle
+		width 160px
+	.puntuacion
+		width 48.5%
+@media screen and (min-width:960px)
+	.thumbnails
+		float left
+		width 70%
+		height 112px
+	.sendEmailPublished
+		padding .5%
+		box-sizing border-box
+		width 29.5%
+		height 480px
+		background #e5e5e5
+		position absolute
+		right 0
+		top 0
+
+	.publishedData
+		width 70%
+		
+	.contentImgPublished
+		width 70%
+		height 480px
+		float left
+		
+	.imgPublished
+		line-height 480px
+		display block
+		img 
+			max-width 100%
+			max-height 480px
+			
+	.contentPublished
+		width 79%
+		box-sizing border-box
+		float right
+		margin-right .5%
+	.patrocinado
+		width 300px
+	.adsbygoogle
+		width 300px
+	.anexo
+		display inline-block
+	.conten-formr
+		float right
+		max-width 50%
+		margin 0
+	.cambiarimagen
+		top 70%
+		&.btn
+			&:after
+				content "\e609  Cambiar"
+				font-size 1em
+
+	.contactamed
+		width auto
+		display block
+	.sobremides
+		display block
+	.opcionesp
+		width 50%
+	.ocontactame
+		display none
+	.opcionesPerfil
+		padding-top 0
+		width 80%
+		float right
+		background #fff
+
+	.sobremi
+		display block
+		margin 0
+	.sobre
+		text-align left
+		margin-top 10px
+	.avatarperfil
+		float none
+		margin 0 auto
+		margin-bottom 5px
+		width 90%
+		position relative
+		.avatar
+			width 100%
+	.bannerPerfil
+		width 100%
+		overflow hidden
+		float right
+		padding-top 0
+		background transparent
+		box-sizing border-box
+		.banner
+			width 100%
+		.cambiarimagen
+			top 80%
+			bottom 0%
+			&.btn
+				&:after
+					content "\e609 Cambiar Portada"
+					font-family: 'icomoon','Open Sans';
+					width 100%
+					line-height 40px
+					display inline-block
+					position absolute
+					color white
+					text-align center
+					top 0
+					left 0
+					z-index 0
+					font-size 2em
+					font-weight normal
+					
+	.tmobil
+		display none
+	.portada
+		width 80%
+		float right
+		position relative
+		background #ECF0F1
+		overflow hidden
+		z-index 0
+	.descriperfil
+		width 19%
+		height 100%
+		text-align center
+		padding .5%
+		background #ECF0F1
+		float left
+		.patrocinado
+			display block
+			margin 0 auto
+		.adsbygoogle
+			width 160px
+			height 600px
+			position relative
+		.title
+			width 80%
+			height 42px
+			overflow inherit
+			&:before
+				content ""
+				border-top 21px solid #0082bd
+				border-left 20.5px solid transparent
+				border-bottom 21px solid #0082bd
+				position absolute
+				right 100%
+			&:after
+				content ""
+				position absolute
+				left 100%
+				border-top 21px solid #0082bd
+				border-right 20.5px solid transparent
+				border-bottom 21px solid #0082bd
+			
+			.oro
+			.bronce
+			.plata
+				left 90%
+				top -50%
+				z-index 3
+	
+	.sobredes
+		display none
+	.perfil
+		.desktop 
+			display block	
+@media screen and (min-width:1000px)
+	.contentbien
+		width 55%
+		float left
+		margin-bottom 50px
+		overflow hidden
+	.bienvenido
+		width 450px
+	.holaregistro
+		display inherit
+	.cambiarUbicacion
+		width 45%
+		float right
+		box-sizing border-box
+	.categorias
+		display block
+		margin-top 50px
+		clear both
+		box-sizing border-box
+	.popalert
+		width 50%
+		left 25%
+	.categoriasMobil
+		display none
+		height 0px
+		overflow hidden
+	.categoriasDesktop
+		display block
+	.menuUser
+		position absolute
+		right 0
+		top 50px
+		background #34495e
+		z-index 5
+		width 200px
+		.opciones
+			text-align left
+			padding .5em 1em
+	.avatarvendedores
+		height 135px		
+	.mejores
+		width 120px
+		height 120px
+		display inline-block
+		.vendedorn
+			top 120px
+			left 0
+			right 0
+			text-align center
+			line-height 120px
+			transition top .3s
+			color #434343
+		&:hover 
+			.vendedorn 
+				top 0px
+	.bronce
+	.plata
+	.oro
+		background url('../img/medallal.png')
+		width 80px
+		height 76px
+		position absolute
+		top 0
+		right .4em 
+	.bronce
+		background-position 0 0
+	.plata
+		background-position -80px 0
+	.oro
+		background-position -160px 0
+
+	.grid
+		width 23.75%
+		&:nth-child(even)
+			margin-right 0
+	.patrocinado 
+		width 300px
+	.adsbygoogle
+		width 300px
+	.menuMobil 
+		display none
+	.logo
+		width 20%
+	.userMenu
+		width 27%
+		&:before
+			content ""
+			border-top 50px solid transparent
+			border-right 50px solid #34495e
+			display inline-block
+			position absolute
+			right 100%
+	.select
+		width 40%
+	.busqueda 
+		clear none
+		text-align center
+
+	.buscar
+		width 82%
+	.textoBuscar
+		display none
+	.buscaricon
+		display inherit
+	.btnBuscar
+		width 7%
+	.title
+		width 50%
+		height 42px
+		margin 0 auto
+		text-align center
+		&:after
+			content ""
+			position absolute
+			left 100%
+			border-top 21px solid #0082bd
+			border-right 20.5px solid transparent
+				border-bottom 21px solid #0082bd
+		&:before
+			content ""
+			border-top 21px solid #0082bd
+			border-left 20.5px solid transparent
+			border-bottom 21px solid #0082bd
+			position absolute
+			right 100%
+	.pop
+		padding .5em
+		background #fff
+		display none
+		border-radius 10px
+		border 5px solid #1a242f
+		top 50px
+		right 10px
+		width 430px
+		background white
+		color gray
+		position absolute
+		z-index 10
+		clear both
+	.mmisor
+		vertical-align top
+		width 320px
+		overflow hidden
+		height 65px
+		display inline-block
+	.mas 
+		display inline-block
+	.footerCategorias
+		float none
+		margin 0 auto
+		width 800px
+		color white
+	.publicidadhrz
+		width 1000px
+		height 90px
+		margin 0 auto
+	.publihrz
+		width 1000px
+		height 90px
+	.title
+		&.tmobil
+			display none
+@media screen and (min-width: 1300px)
+	.bienvenido
+		margin-left 2%
+		width 100%
+		overflow hidden
+	.holaregistro
+		float left
+		width 450px
+	.ivitacion
+		float left
+		width 35%
+		height 350px
+		padding-top 100px
+	.userMenu 
+		width 21%
+	.buscar
+		width 86%
+		.text
+			width 66%
+	.select 
+		width 26%
+	.cambiarUbicacion
+		width 40%

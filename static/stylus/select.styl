@@ -1,0 +1,61 @@
+
+	
+
+
+.cd-dropdown > span{
+	background rgba(250, 250, 250, 1)
+	padding .2em .5em
+	font-size 1.4em
+	border 1px solid #bec3c7
+	transition all .3s
+	display block
+	box-sizing border-box
+	z-index 100
+	position relative
+}
+.cd-dropdown ul li span {
+	background rgba(250, 250, 250, 1)
+	padding .2em .5em
+	font-size 1.4em
+	border 1px solid #bec3c7
+	transition all .3s
+	display block
+	
+	box-sizing border-box
+}
+
+.cd-dropdown ul {
+	position: absolute;
+	max-height: 200px
+	overflow-y scroll
+	overflow-x hidden
+	top: 0px;
+	width: 100%;
+}
+
+.cd-dropdown ul li {
+	position: absolute;
+	width: 100%;
+}
+
+.cd-active.cd-dropdown > span {
+	background #ecf0f1
+}
+
+.cd-active.cd-dropdown > span,
+.cd-active.cd-dropdown ul li span {
+	
+}
+
+.cd-active.cd-dropdown ul li span {
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-ms-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+
+.cd-active.cd-dropdown ul li span:hover {
+	background: #0082bd;
+	color: #fff;
+}

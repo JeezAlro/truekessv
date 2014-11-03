@@ -1,0 +1,32 @@
+.icon {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	fill: currentColor;
+}
+.icon-publicity {
+	/*fill: #000000;*/
+	width: 38px;
+}
+.icon-publicity2 {
+	/*fill: #000000;*/
+	width: 38px;
+}
+.icon-publicity3 {
+	/*fill: #000000;*/
+}
+.icon-heart {
+	/*fill: #000000;*/
+}
+.icon-heart2 {
+	/*fill: #000000;*/
+}
+.icon-package {
+	/*fill: #000000;*/
+}
+.icon-envelope-o {
+	/*fill: #000000;*/
+}
+.icon-heart-broken {
+	/*fill: #000000;*/
+}
