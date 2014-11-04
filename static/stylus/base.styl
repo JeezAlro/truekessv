@@ -126,7 +126,22 @@ button
 	width 95%
 	overflow hidden
 	margin 0 auto
+.padding-left
+	padding 2em
 //modos
+.puntos
+	position relative
+.nomobil
+	display none
+.panelPublished
+	display none
+.sendEmailPublished
+	background #e5e5e5
+.optionsPublished
+	padding 0.5%
+	display block
+	margin-top 0.4em
+	background #e5e5e5
 .nextImg
 	opacity 0
 	background rgba(0,0,0,.2)
@@ -456,6 +471,8 @@ button
 	color #fff
 .textRojo
 	color #e2413e
+.textAmarillo
+	color #d79400
 .underline
 	text-decoration underline
 .peque
@@ -1553,6 +1570,8 @@ button
 	color #fff
 .textRojo
 	color #e2413e
+.nomobil
+	display none
 @media screen and (min-width:480px)
 	.grid
 		width 32%
@@ -1687,19 +1706,28 @@ button
 	.puntuacion
 		width 48.5%
 @media screen and (min-width:960px)
+	.nomobil
+		display inherit
+	.panelPublished
+		display inherit
 	.thumbnails
 		float left
 		width 70%
 		height 112px
-	.sendEmailPublished
-		padding .5%
-		box-sizing border-box
+	.infoPublished
+		width 70%	
+	.panelPublished
 		width 29.5%
-		height 480px
-		background #e5e5e5
 		position absolute
 		right 0
 		top 0
+	.sendEmailPublished
+		padding .5%
+		box-sizing border-box
+		display block
+		height 480px
+		background #e5e5e5
+		
 
 	.publishedData
 		width 70%
@@ -1718,6 +1746,7 @@ button
 			
 	.contentPublished
 		width 79%
+		min-height 1000px
 		box-sizing border-box
 		float right
 		margin-right .5%

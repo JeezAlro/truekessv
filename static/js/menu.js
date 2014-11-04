@@ -194,10 +194,12 @@ function mostrarPublicados(e){
 	return false
 }
 function mostrarPuntos(e){
+
 	$(this).addClass('active').siblings('a').removeClass('active')
 	$puntos.removeClass('none')
 	$publicados.addClass('none')
 	$contactame.addClass('none')
+	$(".container").masonry();
 	return false
 
 }
@@ -234,6 +236,12 @@ function redimencion(e){
         $(".container").masonry();
         if( $(document).width() > 960){
 		$('.sobremi').slideDown(0)
+			if($('.contactame').attr('class')== "bloque contactame center"){
+				$('.contactame').addClass('none')
+				$('.publicados').removeClass('none')
+				$('.opublicados').addClass('active').siblings().removeClass('active')
+			}
+		
 	}else{
 		$('.sobremi').slideUp(0)
 	}
