@@ -193,6 +193,7 @@ function mostrarPublicados(e){
         $(".container").masonry();
 	return false
 }
+
 function mostrarPuntos(e){
 
 	$(this).addClass('active').siblings('a').removeClass('active')
@@ -236,6 +237,7 @@ function redimencion(e){
         $(".container").masonry();
         if( $(document).width() > 960){
 		$('.sobremi').slideDown(0)
+		$('.hiddenMobil').show()
 			if($('.contactame').attr('class')== "bloque contactame center"){
 				$('.contactame').addClass('none')
 				$('.publicados').removeClass('none')
@@ -243,7 +245,9 @@ function redimencion(e){
 			}
 		
 	}else{
+		$('.more').children('span').removeClass('icon-me').addClass('icon-mor')
 		$('.sobremi').slideUp(0)
+		$('.hiddenMobil').hide()
 	}
 	if ( $(document).width() >=510) {
 		$ubicaciones.slideUp(0)
@@ -274,6 +278,81 @@ $opuntos.click(mostrarPuntos)
 $ocontactame.click(mostrarContactame)
 $sobredes.click(mostrarSobremi)
 $selecUbicacion.click(mostrarUbicaciones)
+$('.more').click(more)
+$('#btnValue').click(scrollValue)
+$('.poin').click(esconderCalificacion)
+$('.btncalificar').click(mostrarCalificacion)
+$('#addComent').click(addComent)
+
+function addComent(){
+	var actualPoins = parseInt($('#totalPoins').html(), 10)
+	var recuentoNe = parseInt($('#recuento').children('.negativo').html(), 10)
+	var recuentoNeu = parseInt($('#recuento').children('.neutro').html(), 10)
+	var recuentoPo = parseInt($('#recuento').children('.positivo').html(), 10)
+	var imgSrc = $(this).parent().find('img').attr('src')
+	var userName = $(this).parent().find('.username').html()
+	var userPoin;
+	if($('#dnegativo').css('display') == "inline-block")
+	{
+		$('.totalPoins').html(actualPoins-1)
+		$('.recuento').children('.negativo').html(recuentoNe+1)
+		userPoin = 'negativo'
+	} else if($('#dneutro').css('display') == "inline-block")
+	{
+		$('.totalPoins').html(actualPoins+0)
+		$('.recuento').children('.neutro').html(recuentoNeu+1)
+		userPoin = 'neutro'
+	}else if ($('#dpositivo').css('display') == "inline-block")
+	{
+		$('.totalPoins').html(actualPoins+1)
+		$('.recuento').children('.positivo').html(recuentoPo+1)
+		userPoin = 'positivo'
+	}
+	var userComent = $('#newComent').val()
+	console.log(userPoin)
+	var $elem = $('#calificaciones').children().first()
+	var $clone = $elem.clone(true)
+	$clone.find('img').attr('src', imgSrc)
+	$clone.find('.username').html(userName)
+	$clone.find('span').attr('class', userPoin)
+	$clone.find('.razondepuntos').html(userComent)
+
+	$clone.fadeIn(200).prependTo('#calificaciones')
+	$('.givePoints').fadeOut(0)
+	
+}
+function esconderCalificacion(){
+	$('#addComent').attr('disabled', false)
+	$(this).siblings('label').fadeOut(0)
+	$(this).siblings('span').fadeIn(0)
+	if($(this).siblings('label').css('display') == "none"){
+		return false	
+	}
+}
+function mostrarCalificacion(){
+	$('#addComent').attr('disabled', true)
+	$(this).siblings('label').fadeIn(0)
+	
+	$(this).siblings('input').attr('checked', false)
+	$(this).fadeOut(0)
+}
+
+function scrollValue(){
+	mostrarPuntos();
+	$('.opuntos').addClass('active').siblings('a').removeClass('active')
+	$('html,body').animate({scrollTop: $('#givePoints').offset().top}, 1000)
+	return false
+}
+function more(e){
+
+	$(this).children('span').toggleClass('icon-mor icon-me')
+	$(this).parent().siblings('.hiddenMobil').fadeToggle(200)
+	var ids = $(this).parent().siblings('.hiddenMobil').attr('id')
+	console.log()
+	$('html,body').animate({scrollTop: $('#'+ids).offset().top}, 1000)
+	return false
+	
+}
 function sesion(e){
 	$menu.removeClass('none')
 	$iniciar.css('display','none')

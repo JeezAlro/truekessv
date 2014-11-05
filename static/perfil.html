@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="Experimenta una nueva experiencia cambia las cosas que ya no usas, por las que siempre quisiste alguien está buscando lo que tú tienes y te ofrecerá un cambio interesante, también puedes comprar o vender si prefieres el modo tradicional, experimenta los intercambio o compras online">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<title>Truekes: Cambia, compra, vende o regala</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="static/css/base.css">
+</head>
+<body>
+	<!--Cabecera-->
+	<header class="header">
+		<!--Loogo-->
+		<div class="logo">
+			<figure id="logo" class="logof" >
+				<a href="/"><img src="static/img/logo.png" alt="Truekes El Salvador"></a>
+			</figure>
+		</div>
+		<!--Panel de notificacienes y menus-->
+		<div class="userMenu relative">
+		<div class="iniciar none">
+			<a href="#"class="btn btnlogin">Idenficarme</a>
+		</div>
+			
+			
+			<ul class="menu ">
+				<li class="notificaciones relative">
+					<a href="#" class="btn publicar"><span class="icon-post public"></span><span class="publitext">Publicar</span></a>
+				</li>
+				<li class="notificaciones relative">
+					<a  class="notificacion icon-mail2" href="#"><span class="noti notimjs">20</span></a>
+				
+				</li>
+				<li class="notificaciones"><a class="notificacion icon-bell" href="#"><span class="noti notinot">2</span></a></li>
+				<!--<li class="notificaciones"><a class="notificacion icon-orden" href="#"><span class="noti notiord">2</span></a></li>-->
+				<li class="miavatar"><figure><a href="#"><img src="static/img/user.jpeg" width="40" ></a></figure>
+				</li>
+			</ul>
+		</div>
+		<!--pop de mesajes-->
+		<div class="pop mjs">
+			<a href="#">
+				<div class="mesaje">
+					<figure class="emisor">
+						<img src="static/img/user.jpeg" width="65">			
+					</figure>
+					<div class="mmisor">
+						<span><strong>Jesus Lopez</strong></span><br>
+						<span class="tmjs">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum temporibus nisi? Voluptates explicabo ipsum unde iure veniam, cum mollitia placeat, delectus asperiores quis, ducimus reprehenderit.
+						</span>
+					</div>
+				</div>
+			</a>
+			<a href="#">
+				<div class="mesaje">
+					<figure class="emisor">
+						<img src="static/img/user.jpeg" width="65">			
+					</figure>
+					<div class="mmisor">
+						<span><strong>Jesus Lopez</strong></span><br>
+						<span class="tmjs">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum temporibus nisi? Voluptates explicabo ipsum unde iure veniam, cum mollitia placeat, delectus asperiores quis, ducimus reprehenderit.
+						</span>
+					</div>
+				</div>
+			</a>				
+			<a href="#">
+				<div class="mesaje">
+					<figure class="emisor">
+						<img src="static/img/user.jpeg" width="65">			
+					</figure>
+					<div class="mmisor">
+						<span><strong>Jesus Lopez</strong></span><br>
+						<span class="tmjs">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum temporibus nisi? Voluptates explicabo ipsum unde iure veniam, cum mollitia placeat, delectus asperiores quis, ducimus reprehenderit.
+						</span>
+					</div>
+				</div>
+			</a>				
+			<a href="#">
+				<div class="mesaje">
+					<figure class="emisor">
+						<img src="static/img/user.jpeg" width="65">			
+					</figure>
+					<div class="mmisor">
+						<span><strong>Jesus Lopez</strong></span><br>
+						<span class="tmjs">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque nam, necessitatibus odio dignissimos nostrum temporibus nisi? Voluptates explicabo ipsum unde iure veniam, cum mollitia placeat, delectus asperiores quis, ducimus reprehenderit.
+						</span>
+					</div>
+				</div>
+			</a>					
+		</div>	
+		<!--pop de notificaciones-->
+		<div class="pop not">
+			<div class="mesaje">
+				<figure class="emisor">
+					<a href="#"><img src="static/img/user.jpeg" width="65"></a>				
+				</figure>
+				<div class="mmisor">
+					<span>Jesus Lopez</span><br>
+					<span class="tmjs">
+					Tea seguido
+					</span>
+				</div>
+			</div>
+			
+			</div>		
+		<!--pop de ordenes-->
+		<!---<div class="pop ord">
+			<div class="mesaje">
+				<figure class="emisor">
+					<a href="#"><img src="static/img/prod.jpg" width="65px"></a>				
+				</figure>
+				<div class="mmisor">
+					<span>Wii sin cotrol</span><br>
+					<span class="tmjs">
+					Ya se ha enviado el pedido
+					</span>
+				</div>
+			</div>
+			
+			</div>-->						
+		<!--Menu de usuario-->
+		<div class="menuUser">
+			<ul>
+						<li><a class="opciones"href="http://google.com" target="blank">Perfil</a></li>
+						<li><a class="opciones"href="#">Deseos</a></li>
+						<li><a class="opciones"href="#">Configuracion</a></li>
+						<li><a class="opciones"href="#">Salir</a></li>
+					</ul>
+		</div>
+		<!--Panel de busquedas-->
+		<div class="busqueda relative">
+			<form action="" class="buscar relative">
+				<input class="text" type="search" name="search" placeholder="Burcar">
+				<select id="bCategoria" name="bCategoria" class="select" required>
+						<option value="0" selected>en Truekes</option>
+						
+							<option value="1">en Categoria1</option>
+							<option value="2">en Categoria2</option>
+							<option value="3">en Categoria3</option>
+							<option value="4">en Categoria4</option>
+							<option value="5">en Categoria5</option>
+							<option value="6">en Categoria6</option>
+							<option value="7">en Categoria7</option>
+
+					</select>
+				<input type="submit" class="btnBuscar" value="buscar">
+				<!--<span class="icon-buscar absolute iconobuscar"></span>
+				<span class="icon-delete absolute iconodelete"></span>-->
+			</form>
+			<!--<a href="" class="icon-menu menuMobil radius">
+				</a>	-->	
+		</div>
+		<!--Menu de categorias Para Mobiles-->
+		<!--<nav><ul class="categoriasMobil">
+			<li class="omobil "><a class="icono-mas opciones relative " href="#">Electronica</a>
+				<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+						</ul>
+			</li>
+			<li class="omobil "><a class="icono-
+			mas opciones relative " href="#">Electronica</a>
+				<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+						</ul>
+			</li>
+			<li class="omobil "><a class="icono-mas opciones relative " href="#">Electronica</a>
+				<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+						</ul>
+			</li>
+			<li class="omobil "><a class="icono-mas opciones relative " href="#">Electronica</a>
+				<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+						</ul>
+			</li>
+		</ul>
+		</nav>-->
+		<!--Menu de categorias para Desktop-->
+		<!---<nav><ul class="categoriasDesktop">
+					<li>
+						<a class="opciones" href="#">Electronica</a>
+						<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+							<li><a class="opciones" href="#">Sub Menus</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="opciones" href="#">Computadoras</a>
+						<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus2</a></li>
+							<li><a class="opciones" href="#">Sub Menus2</a></li>
+							<li><a class="opciones" href="#">Sub Menus2</a></li>
+							<li><a class="opciones" href="#">Sub Menus2</a></li>
+							<li><a class="opciones" href="#">Sub Menus2</a></li>
+						</ul>	
+					</li>
+					<li>
+						<a class="opciones" href="#">Ropa y complementos</a>
+						<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus3</a></li>
+							<li><a class="opciones" href="#">Sub Menus3</a></li>
+							<li><a class="opciones" href="#">Sub Menus3</a></li>
+							<li><a class="opciones" href="#">Sub Menus3</a></li>
+							<li><a class="opciones" href="#">Sub Menus3</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="opciones" href="#">Celulares y accesorios</a>
+						<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus4</a></li>
+							<li><a class="opciones" href="#">Sub Menus4</a></li>
+							<li><a class="opciones" href="#">Sub Menus4</a></li>
+							<li><a class="opciones" href="#">Sub Menus4</a></li>
+							<li><a class="opciones" href="#">Sub Menus4</a></li>
+						</ul>
+					</li>
+					<li>
+						<a class="opciones" href="#">Electronica</a>
+						<ul class="submenuCategorias">
+							<li><a class="opciones" href="#">Sub Menus5</a></li>
+							<li><a class="opciones" href="#">Sub Menus5</a></li>
+							<li><a class="opciones" href="#">Sub Menus5</a></li>
+							<li><a class="opciones" href="#">Sub Menus5</a></li>
+							<li><a class="opciones" href="#">Sub Menus5</a></li>
+						</ul>
+					</li>
+		</ul>
+		</nav>-->
+
+	</header>
+	<div class="contenedorg">
+		<div class="popalert escribirMensaje">
+			<div class="titulo">Mensaje a <span class="nombrevendedor">Jesus Lopez</span><span class="cerrar">X</span></div>
+				<form action="">
+					<textarea placeholder="Escribe tu mensaje..." class="mesajenuevo"> </textarea>
+					<button type="submit" class="btn btnazul enviar">Enviar</button>
+				</form>
+		</div>
+		<div class="popalert eliminarPublicado">
+			<div class="titulo">Eliminar Publicado</span><span class="cerrar">X</span></div>
+			<p>¿Seguro quieres eliminar este publicado?</p>
+				<span class="btn btngris cancelar pointer">Cancelar</span> <a href="#" class="btn btnrojo">Eliminar Publicado</a>
+		</div>
+	</div>
+	<section class="warp">
+		
+		<div class="perfil">
+		<div class="portada">
+			
+			
+			<figure class="bannerPerfil">
+				<img class="banner" src="static/img/banner.png" >
+				<div class="cimagen">
+					<label for="fbanner" class="cambiarimagen btn"></label>
+					<input type="file" id="fbanner" accept="image/*">
+				</div>
+			</figure>
+				
+			</div>
+			
+			<div class="descriperfil relative ">
+				<figure class="avatarperfil">
+				<img class="avatar" src="static/img/user.jpeg" >
+				<div class="cimagen">
+					<label for="fperfil" class="cambiarimagen btn"></label>
+					<input type="file" id="fperfil" name="fperfil" accept="image/*">
+
+				</div>
+				</figure>
+				
+
+				<h3 class="title  relative NombredeUsuario">Jesus Lopez <span class="bronce"></span></h3>
+				<div class="contactar center">
+					<p class="info"><span class="iconos-local"></span>San Miguel, San Miguel</p>
+					<a href="#" class="btn btnverde seguir">+ Seguir</a>
+					<a href="#" class="btn btnamarillo enviarMensaje "><span class="icon-mail2"></span>Enviar Mensaje</a>
+					
+				</div>
+				<div class="sobre">
+					<span class="btn btnrojo center btnblock sobredes">Sobre Mi</span>
+					<span class="titulo sobremides">Sobre Mi</span>
+					<p class="sobremi">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure similique soluta minus impedit itaque deserunt totam a, sed quae, aliquid inventore modi, nam ipsam nostrum rem pariatur aperiam aspernatur enim.</p>
+				</div>
+				<div class="contactamed center">
+					<p class="titulo">Contactame  por estos medios</p>
+					<a href="http://fb.com/jeez92" class="btn icon-fb btnf btnblock" target="_blank"> /jeez92</a>
+					<a href="#" class="btn icon-twitter btnt btnblock" target="_blank"> @jeez92</a>
+					<a href="#" class="btn icon-mail2 btnamarillo btnblock" target="_blank"> jesus@outlook.com</a>
+					<a href="#" class="btn icon-web btnverde btnblock" target="_blank"> www.jesusalberto.com</a>
+					<a class="btn icon-phone btngris btnblock"> 7777-7777</a>
+					
+				</div>
+				<aside >
+			<div class="patrocinado">
+							<ins class="adsbygoogle" style="display:inline-block;" data-ad-client="ca-pub-5945619966947206" data-ad-slot="3601622304"></ins>
+							<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+							</script>
+			</div>
+		</aside>
+			</div>
+			<div class="opcionesPerfil ">
+				<nav class="controlesPerfil" >
+						<a href="#"class="opcionesp btn btnazul opublicados active">Publicados</a>
+						<a href="#"class="opcionesp btn btnazul opuntos">Puntuacion</a>
+						<a href="#"class="opcionesp btn btnazul ocontactame">Contactame</a>
+					
+				</nav>
+				<div class="bloque container publicados">
+					<!--Contenedor de la publicacion-->
+					<article class="producto relative bordern grid ">
+						<!--Imagen del publicacion-->
+						<a href="#">
+							<img class="imagenp" src="static/img/prod.jpg">
+						</a>
+						<!--Iformacion-->
+						<div class="infop">
+							<!--Titulo de publicacion-->
+							<a href="#"><h2 class="nombre">Wii Sin control</h2></a>
+							<!--Condicion Usado Nuevo-->
+							<p class="estado">Estado <span class="atributo">Usado</span></p>
+							<!--Ubicacion departamental-->
+							<p class="ubicacion">Ubicacion <span class="atributo">San Salvador</span></p>
+							<!--Costos y tipo de envio-->
+							<p class="envio">Envío <span class="atributo">Gratis</span></p>
+							<!--Vendedor-->
+							<p class="vendedor">Vendedor <a href="#" class="atributo">Davids</a>
+								<!--Medalla del vendedor-->
+								<a href="#" class="bronce"></a>
+							</p>
+							<!--Precio del producto-->
+							<p class="precio relative">$300.00
+								<!--Agregar a lista de deseos-->
+								
+								<a href="#" class="icon-edit conf editarPublicado right"></a>
+								<a href="#" class="icon-remove conf borrarPublicado right"></a>
+								<a href="#" class="agregar icon-heart  conf right"></a>
+							</p>
+						</div>
+					</article>
+
+					<!--Contenedor de la publicacion-->
+					<article class="producto relative bordern grid ">
+						<!--Imagen del publicacion-->
+						<a href="#">
+							<img class="imagenp" src="static/img/prod2.jpg">
+						</a>
+						<!--Iformacion-->
+						<div class="infop">
+							<!--Titulo de publicacion-->
+							<a href="#"><h2 class="nombre">Camisa de superman nueva color azul</h2></a>
+							<!--Condicion Usado Nuevo-->
+							<p class="estado">Estado <span class="atributo">Nuevo</span></p>
+							<!--Ubicacion departamental-->
+							<p class="ubicacion">Ubicacion <span class="atributo">San Salvador</span></p>
+							<!--Costos y tipo de envio-->
+							<p class="envio">Envío <span class="atributo">$2.00</span></p>
+							<!--Vendedor-->
+							<p class="vendedor">Vendedor <a href="#" class="atributo">David</a>
+								<!--Medalla del vendedor-->
+								<a href="#" class="plata"></a>
+							</p>
+							<!--Precio del producto-->
+							<p class="precio relative">$300.00
+								<!--Agregar a lista de deseos-->
+								<a href="#" class="icon-edit conf editarPublicado right"></a>
+								<a href="#" class="icon-remove conf borrarPublicado right"></a>
+								<a href="#" class="agregar icon-heart  conf right"></a>
+							</p>
+						</div>
+					</article>
+
+					
+
+					<!--Contenedor de la publicacion-->
+					<article class="producto relative bordern grid ">
+						<!--Imagen del publicacion-->
+						<a href="#">
+							<img class="imagenp" src="static/img/prod3.jpg">
+						</a>
+						<!--Iformacion-->
+						<div class="infop">
+							<!--Titulo de publicacion-->
+							<a href="#"><h2 class="nombre">iPhone 5s Negro Liberado Nitido</h2></a>
+							<!--Condicion Usado Nuevo-->
+							<p class="estado">Estado <span class="atributo">Usado</span></p>
+							<!--Ubicacion departamental-->
+							<p class="ubicacion">Ubicacion <span class="atributo">San Salvador</span></p>
+							<!--Costos y tipo de envio-->
+							<p class="envio">Envío <span class="atributo">Gratis</span></p>
+							<!--Vendedor-->
+							<p class="vendedor">Vendedor <a href="#" class="atributo">Davids</a>
+								<!--Medalla del vendedor-->
+								<a href="#" class="oro"></a>
+							</p>
+							<!--Precio del producto-->
+							<p class="precio relative">$450.00
+								<!--Agregar a lista de deseos-->
+								<a href="#" class="icon-edit conf editarPublicado right"></a>
+								<a href="#" class="icon-remove conf borrarPublicado right"></a>
+								<a href="#" class="agregar icon-heart  conf right"></a>
+
+							</p>
+						</div>
+					</article>
+
+					<!--Contenedor de la publicacion-->
+					<article class="producto relative bordern grid ">
+						<!--Imagen del publicacion-->
+						<a href="#">
+							<img class="imagenp" src="static/img/prod.jpg">
+						</a>
+						<!--Iformacion-->
+						<div class="infop">
+							<!--Titulo de publicacion-->
+							<a href="#"><h2 class="nombre">Wii Sin control</h2></a>
+							<!--Condicion Usado Nuevo-->
+							<p class="estado">Estado <span class="atributo">Usado</span></p>
+							<!--Ubicacion departamental-->
+							<p class="ubicacion">Ubicacion <span class="atributo">San Salvador</span></p>
+							<!--Costos y tipo de envio-->
+							<p class="envio">Envío <span class="atributo">Gratis</span></p>
+							<!--Vendedor-->
+							<p class="vendedor">Vendedor <a href="#" class="atributo">Davids</a>
+								<!--Medalla del vendedor-->
+								<a href="#" class="bronce"></a>
+							</p>
+							<!--Precio del producto-->
+							<p class="precio relative">$300.00
+								<!--Agregar a lista de deseos-->
+								<a href="#" class="icon-edit conf editarPublicado right"></a>
+								<a href="#" class="icon-remove conf borrarPublicado right"></a>
+								<a href="#" class="agregar icon-heart  conf right"></a>
+
+							</p>
+						</div>
+					</article>
+			</div>
+
+  				<div class="bloque center puntos none">
+	  				<div class="resumenpuntos">
+	  					<div class="total"><span>50</span><span class="bronce"></span></div>
+						<div class="recuento"> 
+		  					<span class="negativo"> 10</span>
+		  					<span class="neutro"> 1</span>
+		  					<span class="positivo"> 60</span>
+						</div>
+	  					
+	  					
+	  					
+	  				</div>
+	  				<div class="container">
+					<div class="puntuacion">
+						<figure class="emisor radius bordern">
+							<a href="#"><img src="static/img/user.jpeg" width="65"></a>				
+						</figure>
+						 <h3 class="titulo">David Castro</h3>
+						 <span class="neutro"></span>
+						<a href="#">Camisa de super man</a>
+						 <p class="razondepuntos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam at expedita, nesciunt rem, illo dolor accusantium, fuga temporibus nobis suscipit et id animi ea amet molestias velit non explicabo nulla.</p>
+					</div>
+
+					<div class="puntuacion">
+						<figure class="emisor radius bordern">
+							<a href="#"><img src="static/img/user.jpeg" width="65"></a>				
+						</figure>
+						 <h3 class="titulo">Anonimo</h3>
+						 <span class="positivo"></span>
+						<a href="#">Camisa de super man</a>
+
+						 <p class="razondepuntos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam at expedita, nesciunt rem, illo dolor accusantium, fuga temporibus nobis suscipit et id animi ea amet molestias velit non explicabo nulla.</p>
+					</div>
+					<div class="puntuacion">
+						<figure class="emisor radius bordern">
+							<a href="#"><img src="static/img/user.jpeg" width="65"></a>				
+						</figure>
+						 <h3 class="titulo">David</h3>
+						 <span class="negativo"></span>
+						<a href="#">Camisa de super man</a>
+
+						 <p class="razondepuntos">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam at expedita, nesciunt rem, illo dolor accusantium, fuga temporibus nobis suscipit et id animi ea amet molestias velit non explicabo nulla.</p>
+					</div>
+					</div>
+				</div>
+				<div class="bloque contactame center none">
+					<p>Contactame  por estos medios</p>
+					<a href="http://fb.com/jeez92" class="btn icon-f btnf btnblock" target="_blank"> /jeez92</a>
+					<a href="#" class="btn icon-twitter13 btnt btnblock" target="_blank"> @jeez92</a>
+					<a href="#" class="btn icon-mail btnamarillo btnblock" target="_blank"> jesus@outlook.com</a>
+					<a href="#" class="btn iconos-web btnverde btnblock" target="_blank"> www.jesusalberto.com</a>
+					<a class="btn icon-phone btngris btnblock"> 7777-7777</a>
+					
+				</div>
+					<aside class="patrohrzc">
+			<div class="publicidadhrz">
+			<ins class="adsbygoogle publihrz" style="display:inline-block;" data-ad-client="ca-pub-5945619966947206" data-ad-slot="3601622304"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+			</div>
+		</aside>
+		</div>
+
+	</section>
+
+
+
+	<div class="pre-footer">
+		<figure id="logo" class="logof" >
+				<a href="/"><img src="static/img/logofo.png" alt="Truekes El Salvador"></a>
+			
+		</figure>
+		
+		<div class="contacto">
+			<a class="icon-fb center block"href="#"> /truekeselsalvador</a>
+			<a class="icon-twitter block" href="#">     @trukeselsalavador</a>
+			<a class="icon-mail2 block"href="mailto:hola@truekes.com">   hola@tuekes.com</a>
+		</div>
+
+		
+			<div class="footerCategorias">
+			<h3>Categorias</h3>
+		<ul class="categoriasFooter">
+			<li><a class="opciones" href="#">Electronica</a></li>
+			<li><a class="opciones" href="#">Computadoras</a></li>
+			<li><a class="opciones" href="#">Ropa y complementos</a></li>
+			<li><a class="opciones" href="#">Celulares y accesorios</a></li>
+			<li><a class="opciones" href="#">Electronica</a></li>
+			
+			
+		</ul>
+	</div>
+		</div>
+	<footer class="footer">
+		
+			<div class="iformacion">
+				<a class="opciones" href="#">Terminos</a>
+				<a class="opciones" href="#">¿Que es Truekes?</a>
+				<a class="opciones" href="#">FAQ</a>
+			</div>
+	</footer>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script src="static/js/menu.js"></script>
+	<script type="text/javascript" src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        $('img').load(function(){
+            $(".container").masonry();
+        });
+        $(".container").masonry();
+    });
+	</script>
+</body>
+</html>

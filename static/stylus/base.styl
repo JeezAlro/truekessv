@@ -24,6 +24,8 @@ input[type="file"]
 	display none
 	&:focus
 		outline none
+input[disabled]
+	opacity 0.4
 button
 	cursor pointer
 .pointer
@@ -129,12 +131,26 @@ button
 .padding-left
 	padding 2em
 //modos
+.navigatePost
+	display block
+	overflow hidden
+.selectPoin
+	display inline-block
+.givePoints
+	background #e5e5e5
+	padding .5em
+	overflow hidden
+	.negativo
+	.neutro
+	.positivo
+		cursor pointer
+	input[type="checkbox"]
+		display none
 .puntos
 	position relative
 .nomobil
 	display none
-.panelPublished
-	display none
+
 .sendEmailPublished
 	background #e5e5e5
 .optionsPublished
@@ -494,6 +510,7 @@ button
 		.icon-f
 			margin-right 5px
 .descriperfil
+	padding-top 8px
 	.title
 		width auto
 		display block
@@ -558,10 +575,26 @@ button
 		float left
 		overflow hidden
 		width 20%
+		max-width 100px
 		padding 0
 		border 5px solid #fff
 		margin 0 auto
 		margin-top -9%
+		z-index 3
+		.avatar
+			width 100%
+.avatarPublished
+		background #ECF0F1
+		display block
+		border-radius 50%
+		position absolute
+		float left
+		overflow hidden
+		width 58px
+		padding 0
+		border 5px solid #fff
+		margin 0 auto
+		margin-top -15px
 		z-index 3
 		.avatar
 			width 100%
@@ -650,9 +683,24 @@ button
 	&.btnazul
 		padding 1em 0em
 		font-weight normal
+		font-size .8em
 	&.active
 		background #293a4a
-	
+.tabPublished
+	float left
+	background yellow
+	width 50%
+	text-align center
+	font-weight normal
+	font-size .8em
+	text-transform uppercase
+	padding .5em 0
+	&.btnazul
+		padding 1em 0em
+		font-weight normal
+		font-size .8em
+	&.active
+		background #293a4a
 .resumenpuntos
 	text-align left
 	position relative
@@ -696,6 +744,17 @@ button
 .puntuacion
 	padding .5em 0
 	display inline-block
+	text-align left
+	margin-right 1%
+	width auto
+	border-bottom 2px dashed #0082bd
+	a 
+		color #0082bd
+		font-style italic
+		font-size 1.2em
+.puntuacionP
+	padding .5em 0
+	display block
 	text-align left
 	margin-right 1%
 	width auto
@@ -818,6 +877,7 @@ button
 	background black
 	border none
 	color #fff
+	cursor pointer
 	span
 		margin-right 5px
 .btnblock
@@ -833,7 +893,8 @@ button
 	margin-right 4px
 	padding .7em 1.2em
 .btnlogin
-	font-weight:  bold;
+	font-weight:  normal;
+	font-size 1em
 	background #2dcb6f
 	border-bottom 4px solid #26ac5f
 	transition all .3s
@@ -843,14 +904,16 @@ button
 .btnverde
 	background #90c626
 	border-bottom 3px solid #85af1e
-	font-weight bold
 	transition all .3s
+	font-weight:  normal;
+	font-size 1em
 	&:hover
 		background #85af1e
 .btnamarillo
 	background #FF9900
 	border-bottom 3px solid #D55403
-	font-weight bold
+	font-weight:  normal;
+	font-size 1em
 	transition all .3s
 	&:hover
 		background #D55403
@@ -858,7 +921,8 @@ button
 	background #0082bd
 	border-bottom 3px solid #293a4a
 	transition background .3s
-	font-weight bold
+	font-weight:  normal;
+	font-size 1em
 	padding-right 0.3em
 	padding-left 0.3em
 	&:hover
@@ -879,7 +943,8 @@ button
 	background #e2413e
 	border-bottom 3px solid #e91222
 	transition all .3s
-	font-weight bold
+	font-weight:  normal;
+	font-size 1em
 	padding-right 0.3em
 	padding-left 0.3em
 	&:hover
@@ -888,7 +953,8 @@ button
 	background #abb7b7
 	border-bottom 3px solid #7e8c8d
 	transition all .3s
-	font-weight bold
+	font-weight:  normal;
+	font-size 1em
 	padding-right 0.3em
 	padding-left 0.3em
 	&:hover
@@ -897,7 +963,8 @@ button
 	background #3d5b94
 	border-bottom 3px solid #334a75
 	text-align center
-	font-weight bold
+	font-weight:  normal;
+	font-size 1em
 	transition all .3s
 	&:hover
 		background #334a75
@@ -905,7 +972,8 @@ button
 	background #60aad8
 	border-bottom 3px solid #4884a8
 	text-align center
-	font-weight bold
+	font-weight:  normal;
+	font-size 1em
 	transition all .3s
 	&:hover
 		background #4884a8
@@ -1543,6 +1611,15 @@ button
 	border none
 	&:focus
 		outline none
+.newComent
+	margin 0 auto
+	bottom 0
+	width 100%
+	display block
+	height 150px
+	resize none
+	margin-bottom 5px
+	border none
 button
 	width 40%
 	border-right none
@@ -1570,7 +1647,7 @@ button
 	color #fff
 .textRojo
 	color #e2413e
-.nomobil
+.hiddenMobil
 	display none
 @media screen and (min-width:480px)
 	.grid
@@ -1706,7 +1783,14 @@ button
 	.puntuacion
 		width 48.5%
 @media screen and (min-width:960px)
-	.nomobil
+	.navigatePost
+		width 29.5%
+		position absolute
+		top 0
+		right 0
+	.more 
+		display none
+	.hiddenMobil
 		display inherit
 	.panelPublished
 		display inherit
@@ -1796,6 +1880,13 @@ button
 		position relative
 		.avatar
 			width 100%
+			
+	.avatarPublished
+		float none
+		margin 0 auto
+		margin-bottom 5px
+		width 90%
+		position relative
 	.bannerPerfil
 		width 100%
 		overflow hidden
