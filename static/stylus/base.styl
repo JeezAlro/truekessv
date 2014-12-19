@@ -131,6 +131,129 @@ button
 .padding-left
 	padding 2em
 //modos
+.backSelect
+	display block
+	&.active
+		display block
+.selectSub
+	cursor pointer
+	color #4ea5c4
+	font-size 1.5em
+	font-weight normal
+	line-height 2em
+	vertical-align top
+	margin 0 auto
+	position relative
+	transition all 0.3s
+	border-radius 0px 24px 24px 0px
+	&:hover
+		background #4ea5c4
+		color #fff
+.paddinTopBottom
+	padding-top .5em
+	padding-bottom .5em		
+.nextCircle
+	font-size 1.8em
+	background #4ea5c4
+	color  #fff
+	border-radius 50%
+	position absolute
+	right 0
+	top 2px
+.border-bottom
+	border-bottom 2px dashed #4ea5c4
+.publisherSelect
+	margin-top 15px
+	overflow hidden
+.publisherCategories
+	display none
+	
+.publisherSubCategories
+	display none
+	min-height 500px
+.subCategoriesContent
+	background #ecf0f1
+	min-height 500px
+.hola
+	background red
+	display none
+	height 200px
+.hola2
+	background blue
+	display none
+	height 200px
+.publisherCategories
+.publisherSubCategories
+	&:active
+		display block
+.publisherCategoriesSelect
+	display block
+	height 100px
+	background red
+	overflow hidden
+.nameCategorie
+	line-height 100px
+	display inline-block
+	vertical-align top
+	color rgba(0, 0, 0, .3)
+	font-size 1.5em
+	padding 0
+	margin 0
+	transition all 0.2s
+.nameCategorieSelect
+	display inline-block
+	vertical-align top
+	color #4ea5c4
+	font-size 2em
+	padding 0
+	margin 0
+	transition all 0.2s
+	font-weight lighter
+.inputsRadio
+	display none
+.contentCategorie
+	background transparent
+	height 100px
+	padding-left 15%
+	cursor pointer
+	position relative
+	border-bottom 2px solid transparent
+	&.active
+		background #ecf0f1
+		&:after
+			content ""
+			position absolute
+			left 100%
+			border-left 50px solid #ecf0f1
+			border-bottom 50px solid transparent
+			border-top 50px solid transparent
+			
+	&:hover
+		border-bottom 2px solid #ecf0f1
+		.nameCategorie
+			color #a4a4a4
+.panelPublisher
+	width auto
+	display block
+	height 100px
+	margin 10px 0
+
+.navigatePublisher
+	background gray
+	display block
+	height 50px
+.rooter
+	background #e5e5e5
+	display none
+	text-align center
+	color rgba(0, 0, 0, .3)
+	font-size 1.25em
+	line-height 50px
+	&.active
+		display block
+		background #4ea5c4
+
+	
 .navigatePost
 	display block
 	overflow hidden
@@ -290,6 +413,7 @@ button
 	background transparent
 	display block
 	overflow hidden
+
 .categoriaContent
 	background transparent
 	width 48%
@@ -318,6 +442,18 @@ button
 	width 100px
 	height 100px
 	margin 0 auto
+.iconP
+	background transparent
+	display inline-block
+	width 100px
+	height 100px
+.iconx2
+	background transparent
+	display block
+	width 200px
+	height 200px
+	margin 0 auto
+
 .icon-cate01
 	background transparent url('../img/categorias/sprintes-cate.png') 0 0 no-repeat
 	background-size 400px 300px
@@ -355,6 +491,42 @@ button
 	background transparent url('../img/categorias/sprintes-cate.png') -300px -200px no-repeat
 	background-size 400px 300px
 
+.iconx2-cate01
+	background transparent url('../img/categorias/sprintes-cate.png') 0 0 no-repeat
+	background-size 800px 600px
+.iconx2-cate02
+	background transparent url('../img/categorias/sprintes-cate.png') -200px 0 no-repeat
+	background-size 800px 600px
+.iconx2-cate03
+	background transparent url('../img/categorias/sprintes-cate.png') -400px 0 no-repeat
+	background-size 800px 600px
+.iconx2-cate04
+	background transparent url('../img/categorias/sprintes-cate.png') -600px 0 no-repeat
+	background-size 800px 600px
+.iconx2-cate05
+	background transparent url('../img/categorias/sprintes-cate.png') 0 -200px no-repeat
+	background-size 800px 600px
+.iconx2-cate06
+	background transparent url('../img/categorias/sprintes-cate.png') -200px -200px no-repeat
+	background-size 800px 600px
+.iconx2-cate07
+	background transparent url('../img/categorias/sprintes-cate.png') -400px -200px no-repeat
+	background-size 800px 600px
+.iconx2-cate08
+	background transparent url('../img/categorias/sprintes-cate.png') -600px -200px no-repeat
+	background-size 800px 600px
+.iconx2-cate09
+	background transparent url('../img/categorias/sprintes-cate.png') 0px -400px no-repeat
+	background-size 800px 600px
+.iconx2-cate010
+	background transparent url('../img/categorias/sprintes-cate.png') -200px -400px no-repeat
+	background-size 800px 600px
+.iconx2-cate011
+	background transparent url('../img/categorias/sprintes-cate.png') -400px -400px no-repeat
+	background-size 800px 600px
+.iconx2-cate012
+	background transparent url('../img/categorias/sprintes-cate.png') -600px -400px no-repeat
+	background-size 800px 600px
 
 
 
@@ -981,7 +1153,8 @@ button
 
 .header
 	background #e5e5e5
-
+.headerPublisher
+	background #ecf0f1
 //logo
 .logo
 	background #ecf0f1
@@ -1017,6 +1190,15 @@ button
 	vertical-align middle
 	img
 		width 100%
+.logo-center
+	width 10em
+	display inline-block
+	img
+		width 100%
+.verticalMiddle
+	line-height 49px
+.spanPublicar
+	vertical-align bottom
 .logo-l
 	margin 0 0 0 .4em 
 	width 10em
@@ -1735,6 +1917,9 @@ button
 		width 460px
 		height 90px
 @media screen and (min-width:510px)
+	.selectSub
+		padding-left 3%
+		padding-right 3%
 	.categoriaContent
 		width 32%
 			
@@ -1783,6 +1968,66 @@ button
 	.puntuacion
 		width 48.5%
 @media screen and (min-width:960px)
+	.backSelect
+		display none
+		&.active
+			display none
+	.publisherCategories
+		display block
+		width 50%
+		float left
+	.publisherSubCategories
+		display block
+		width 48%
+		min-height 500px
+		float right
+	.subCategoriesContent
+		display none
+		width auto
+		min-height 500px
+	.rooter
+		background #e5e5e5
+		width 33.33%
+		float left
+		text-align center
+		line-height 50px
+		display block
+		position relative
+		&.active
+			background #4ea5c4
+			&:before
+				content ""
+				position absolute
+				left 100%
+				border-top 25px solid transparent
+				border-bottom 25px solid transparent
+				border-left 25px solid #4ea5c4
+				z-index 10
+			&:after
+				content ""
+				position absolute
+				top 100%
+				right 45%
+				left 45%
+				margin-left: auto;
+				margin-right: auto;
+				border-top 15px solid #4ea5c4
+				border-left 40px solid transparent
+				border-right 40px solid transparent
+				z-index 10
+		&.complete
+			background #90c626
+			
+			&:before
+				content ""
+				position absolute
+				left 100%
+				border-top 25px solid transparent
+				border-bottom 25px solid transparent
+			
+				border-left 25px solid #90c626
+				z-index 10
+				
 	.navigatePost
 		width 29.5%
 		position absolute

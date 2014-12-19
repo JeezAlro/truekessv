@@ -235,7 +235,7 @@ function redimencion(e){
             $(".container").masonry();
         });
         $(".container").masonry();
-        if( $(document).width() > 960){
+        if( $(document).width() >= 943){
 		$('.sobremi').slideDown(0)
 		$('.hiddenMobil').show()
 			if($('.contactame').attr('class')== "bloque contactame center"){
@@ -283,7 +283,36 @@ $('#btnValue').click(scrollValue)
 $('.poin').click(esconderCalificacion)
 $('.btncalificar').click(mostrarCalificacion)
 $('#addComent').click(addComent)
+$('.contentCategorie').click(selectCategorie)
+$('.selectSub').click(selectSub)
+$('#backSelect').click(backSelection)
+function backSelection(){
+	$('.subCategoriesContent').removeClass('active')
+	$('.publisherCategories').addClass('active')
+}
+function selectSub(){
+	var value = $(this).attr('data-value');
+	$('#rootCate').removeClass('active').addClass('complete')
+	$('#rootDetail').addClass('active')
+	$('#selectionSubCategorie').val(value)
 
+
+	console.log(value)
+}
+function selectCategorie(){
+	var value = $(this).attr('data-value');
+	$(this).addClass('active').siblings().removeClass('active');
+	$(this).hide().prependTo('#labelSelectCategories').fadeIn();
+	$('.subCategoriesContent').hide().fadeIn(300);
+	$('html,body').animate({scrollTop: $('.panelPublisher').offset().top}, 500);
+	$('.publisherCategories').removeClass('active')
+	$('.publisherSubCategories').addClass('active').fadeIn()
+	$showSubId = ($(this).attr('id'))+'Sub';
+	$('#'+$showSubId).fadeIn().siblings().hide();
+	$('#backSelect').addClass('active');
+	$('#selectionCategorie').val(value);
+	
+}
 function addComent(){
 	var actualPoins = parseInt($('#totalPoins').html(), 10)
 	var recuentoNe = parseInt($('#recuento').children('.negativo').html(), 10)
@@ -309,7 +338,7 @@ function addComent(){
 		userPoin = 'positivo'
 	}
 	var userComent = $('#newComent').val()
-	console.log(userPoin)
+	
 	var $elem = $('#calificaciones').children().first()
 	var $clone = $elem.clone(true)
 	$clone.find('img').attr('src', imgSrc)
@@ -348,7 +377,7 @@ function more(e){
 	$(this).children('span').toggleClass('icon-mor icon-me')
 	$(this).parent().siblings('.hiddenMobil').fadeToggle(200)
 	var ids = $(this).parent().siblings('.hiddenMobil').attr('id')
-	console.log()
+	
 	$('html,body').animate({scrollTop: $('#'+ids).offset().top}, 1000)
 	return false
 	
@@ -434,7 +463,7 @@ function changeImgPublishedBig(e){
   
 
 	}
-	console.log(imgC)
+
 	
 }
 function changeImgPublished(e){
