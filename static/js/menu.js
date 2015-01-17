@@ -27,7 +27,8 @@
 		$sobremi = $('.sobremi'),
 		$selecUbicacion = $('#selecUbicacion'),
 		$iconSelecUbicacion = $('#iconSelecUbicacion'),
-		$ubicaciones = $('#ubicaciones')
+		$ubicaciones = $('#ubicaciones'),
+		$root = document.URL
 
 
 
@@ -283,50 +284,7 @@ $('#btnValue').click(scrollValue)
 $('.poin').click(esconderCalificacion)
 $('.btncalificar').click(mostrarCalificacion)
 $('#addComent').click(addComent)
-$('.contentCategorie').click(selectCategorie)
-$('.selectSub').click(selectSub)
-$('#backSelect').click(backSelection)
-$('#back').click(back)
-function back(){
-	$('#publisherSelect').fadeIn()
-	$('#detailsPublisher').hide()
-	$('#rootCate').addClass('active').removeClass('complete')
-	$('#rootDetail').removeClass('active')
-}
-function backSelection(){
-	$('.publisherSubCategories').hide().removeClass('active')
-	$('.publisherCategories').addClass('active')
-}
-function selectSub(){
-	var value = $(this).attr('data-value');
-	var $elemName = $(this).text();
-	$('#rootCate').removeClass('active').addClass('complete')
-	$('#rootDetail').addClass('active')
-	$('#selectionSubCategorie').val(value)
 
-	$('#subCategorie').text($elemName)
-	$('#publisherSelect').hide()
-	$('#detailsPublisher').fadeIn()
-	
-}
-function selectCategorie(){
-	var value = $(this).attr('data-value');
-	var $elemIcon = $(this).children('b').attr('class')
- 	var $elemName = $(this).children('span').text();
-	$(this).addClass('active').siblings().removeClass('active');
-	$(this).hide().prependTo('#labelSelectCategories').fadeIn();
-	$('.subCategoriesContent').hide().fadeIn(300);
-	$('html,body').animate({scrollTop: $('.panelPublisher').offset().top}, 500);
-	$('.publisherCategories').removeClass('active')
-	$('.publisherSubCategories').addClass('active').fadeIn()
-	$showSubId = ($(this).attr('id'))+'Sub';
-	$('#'+$showSubId).fadeIn().siblings().hide();
-	$('#backSelect').addClass('active');
-	$('#selectionCategorie').val(value);
-	$('#iconCate').attr('class', $elemIcon)
-	$('#categorie').text($elemName)
-	
-}
 function addComent(){
 	var actualPoins = parseInt($('#totalPoins').html(), 10)
 	var recuentoNe = parseInt($('#recuento').children('.negativo').html(), 10)

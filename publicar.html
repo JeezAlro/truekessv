@@ -228,7 +228,7 @@
 </section>
 
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script src="static/js/menu.js"></script>
+	<script src="static/js/publish.js"></script>
 	<script type="text/javascript" src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
@@ -240,6 +240,14 @@
         });
         $(".container").masonry();
     });
+	hashHandler();
+	$(document).ready(function(){
+	stateObj ={publicar: 'Publisher/SelectionCategorie'}
+	history.pushState(stateObj, "publicado", "Publish/SelectCategory")
+	})
+
 	</script>
+
+
 </body>
 </html>
