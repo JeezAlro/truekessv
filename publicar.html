@@ -10,6 +10,18 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="static/css/base.css">
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="static/js/jquery.numeric_input.min.js"></script>
+
+	<script language="javascript" type="text/javascript" src="static/js/tinymce/js/tinymce/tinymce.min.js"></script>
+	<script type="text/javascript">
+tinymce.init({
+    selector: "textarea",
+    language : 'es_MX',
+    menubar : false,
+    height : 300,
+  	content_css: "static/css/content.css"
+ });
+</script>
 </head>
 <header class="headerPublisher center verticalMiddle">
 	<figure id="logo" class="logo-center" >
@@ -23,6 +35,7 @@
 		<div id="rootDetail" class="rooter"><span class="icon-post"></span> Detalles del Publicado</div>
 		<div id="rootComplete" class="rooter"><span class="icon-eye"></span> Revisa Publicado</div>
 	</div>
+	
 	<form action="">
 	<div id="publisherSelect" class="publisherSelect">
 		<div class="publisherCategories active">
@@ -210,11 +223,135 @@
 			</div>
 			</div>
 			</div>
-			<div class="titleDiv">
+			<div id="titlePublishC" class="titleDiv sectionForm">
 				<label for="titlePublish" class="lineNormal">Titulo del Publicado</label>
 				<input type="text" id="titlePublish" name="titlePublish" class="inputTextPublisher">
 			</div>
+			<div id="imgPrimaryC" class="sectionForm marginTop">
+			<p class="lineNormal marginNone">Fotos</p>
+				<label for="imgPrimary" class="imgPrimary">
+					<div class="imgContext">
+						<span class="icon-camera textXtraLarge textGris block"></span>
+						<span class="textAzul textLarge block">
+							Agrega la foto Pricipal 
+						</span>
+						<span class="textGris movileNone">
+						La foto principal aparecerá en los resultados de búsquedas
+						</span>
+					</div>
+					<div id="imgPrimaryLabel">
+					
+					</div>
+					<div class="addimeg"> 
+						<span class="icon-more">+</span>
+					</div>
+					<div class="delete">
+						<span class="icon-remove icon-X"></span>
+					</div>
+					<input type="file" name="imgPrimary" id="imgPrimary" accept="image/*">
+				</label>
+				<label for="img3" class="imgMore">
+				<div class="imgContext">
+					<span class="icon-camera text300 textGris block"></span>
+					<span class="textAzul block">
+						Agrega foto
+					</span>
+				</div>
+				<div id="img3Label">
+					
+				</div>
+					<div class="addimeg"> 
+						<span class="icon-more">+</span>
+					</div>
+					<div class="delete">
+						<span class="icon-remove icon-X"></span>
+					</div>
+					<input type="file" class="moreImgLoad" name="img3" id="img3" accept="image/*">
+				</label>
+				<label for="img2" class="imgMore">
+				<div class="imgContext">
+					<span class="icon-camera text300 textGris block"></span>
+					<span class="textAzul block">
+						Agrega foto
+					</span>
+				</div>
+				<div id="img2Label">
+					
+				</div>
+					<div class="addimeg"> 
+						<span class="icon-more">+</span>
+					</div>
+					<div class="delete">
+						<span class="icon-remove icon-X"></span>
+					</div>
+					<input type="file" class="moreImgLoad" name="img2" id="img2" accept="image/*">
+				</label>
+				<label for="img5" class="imgMore">
+				<div class="imgContext">
+					<span class="icon-camera text300 textGris block"></span>
+					<span class="textAzul block">
+						Agrega foto
+					</span>
+				</div>
+				<div id="img5Label">
+					
+				</div>
+					<div class="addimeg"> 
+						<span class="icon-more">+</span>
+					</div>
+					<div class="delete">
+						<span class="icon-remove icon-X"></span>
+					</div>
+					<input type="file" class="moreImgLoad" name="img5" id="img5" accept="image/*">
+				</label>
+				<label for="img4" class="imgMore">
+				<div class="imgContext">
+					<span class="icon-camera text300 textGris block"></span>
+					<span class="textAzul block">
+						Agrega foto
+					</span>
+				</div>
+				<div id="img4Label">
+				
+				</div>
+					<div class="addimeg"> 
+						<span class="icon-more">+</span>
+					</div>
+					<div class="delete">
+						<span class="icon-remove icon-X"></span>
+					</div>
+					<input type="file" class="moreImgLoad" name="img4" id="img4" accept="image/*">
+				</label>
+				
+				
+			</div>
+			<div id="description" class="sectionForm marginTop">
+				<p class="lineNormal marginNone">Describe tu Publicado</p>
+				<textarea name="descriptionPublish" id="descriptionPublish" ></textarea>
+			</div>
+			<div id="modePublish" class="sectionForm marginTop">
+				<p class="lineNormal marginNone">Tipo de Publicado</p>
+				<label for="typePublish" data-value="sell" class="typePublish btn btnverde column3">Vendo</label>
+				<label for="typePublish" data-value="change" class="typePublish btn btnazul column3">Cambio</label> 
+				<label for="typePublish" data-value="gif" class="typePublish btn btnamarillo column3">Regalo</label>
+				<span id="changeType" class="btn btngris right none">Cambiar tipo</span>
+					
+			</div>
+			<div id="value"  class="sectionForm marginTop">
+				<div id="sell" class="sell none">
+					<label for="sellPrice" class="lineNormal inline">Precio $</label>
+					<input type="text" id="sellPrice" name="sellPrice" class="inputNumPublisher">
+				</div>
+				<div id="change" class="change none">
+					<label for="changeMode" class="lineNormal inline">Cambio por</label>
+					<input type="text" id="changeMode" name="changeMode" class="inputTextPublisher">
+				</div>
+				<div id="sell" class="gif none">
+					<span class="lineNormal">Estas seguro que ofreceras esto gratis</span>
+				</div>
+			</div>
 
+			<span id="revisar" class="btn btnazul">revisar</span>
 		</div>
 		<div class="helpPublisher"></div>
 	</div>
@@ -222,13 +359,17 @@
 	<div id="inputsRadio"class="inputsRadio">
 						<input type="radio" name="selectionCategorie" value="00" id="selectionCategorie">
 						<input type="radio" name="selectionSubCategorie" value="00" id="selectionSubCategorie">
+						<input type="radio" name="modePublish" value="" id="typePublish">
 						</div>	
 	<input type="submit" value="enviar">
 	</form>
+
 </section>
 
 	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script src="static/js/publish.js"></script>
+	<script src="static/js/jquery.numeric_input.min.js"></script>
+	
 	<script type="text/javascript" src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});

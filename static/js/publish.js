@@ -2,8 +2,52 @@ $('.contentCategorie').click(selectCategorie)
 $('.selectSub').click(selectSub)
 $('#backSelect').click(backSelection)
 $('#back').click(back)
+$('.typePublish').click(modePublish)
+$('#changeType').click(changeModePublish)
+$('#sellPrice').numeric_input({
+  decimal: '.'
+});
+$('#revisar').click(comprobarPublish)
 
-    function dominio_base()
+function comprobarPublish(){
+	if($('#typePublish').val()==""){
+		$('html,body').animate({scrollTop: $('#value').offset().top}, 300)
+		console.log("poner tipo")
+	}
+	if($('#tinymce').html()=='<p><br data-mce-bogus="1"></p>'){
+		$('html,body').animate({scrollTop: $('#description').offset().top}, 300)
+		console.log("poner descripcion")
+	}
+	if($('#imgPrimary').val()==""){
+		$('html,body').animate({scrollTop: $('#imgPrimaryC').offset().top}, 300)
+		console.log("poner foto")
+	}
+	if($('#titlePublish').val()==""){
+		$('html,body').animate({scrollTop: $('#titlePublishC').offset().top}, 300)
+		console.log("poner titulo")
+	}
+	
+
+}
+
+function changeModePublish(){
+	$(this).hide()
+	$('.typePublish').show().removeClass('active')
+	$('#value').children().hide()
+	$('#value').find('input').val('')
+
+}
+function modePublish()
+{ 
+	var $value = $(this).attr('data-value');
+	$(this).addClass('active').siblings('label').hide()
+	$('#changeType').show()
+	$('#typePublish').val($value)
+	$('#value').children('.'+$value).fadeIn().siblings().hide()
+
+}
+
+ function dominio_base()
 {
 // capturamos la url
 url_site = document.location.href
@@ -122,3 +166,68 @@ function selectCategorie(){
 	stateObj ={publicar: 'Publisher/SelectionSubCategorie'}
 	history.pushState(stateObj, "publicado", "SelectSubCategory")
 }
+function archivo(evt) {
+      var files = evt.target.files; // FileList object
+      var insert = ($(this).attr('id'))+"Label"
+      console.log(insert)
+        //Obtenemos la imagen del campo "file". 
+      for (var i = 0, f; f = files[i]; i++) {         
+           //Solo admitimos imágenes.
+           if (!f.type.match('image.*')) {
+                continue;
+           }
+       
+           var reader = new FileReader();
+           
+           reader.onload = (function(theFile) {
+               return function(e) {
+               // Creamos la imagen.
+               $('#'+insert).siblings('.imgContext').addClass('disabled')
+                      $("#"+insert).html( ['<div class="imgPrimaryLabel"><img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/></div>'].join(''))
+              		$('#'+insert).siblings('.delete').addClass('active')
+
+               };
+           })(f);
+ 
+           reader.readAsDataURL(f);
+       }
+}
+   
+ function archivo2(evt) {
+      var files = evt.target.files; // FileList object
+      var insert = ($(this).attr('id'))+"Label"
+      console.log(insert)
+        //Obtenemos la imagen del campo "file". 
+      for (var i = 0, f; f = files[i]; i++) {         
+           //Solo admitimos imágenes.
+           if (!f.type.match('image.*')) {
+                continue;
+           }
+       
+           var reader = new FileReader();
+           
+           reader.onload = (function(theFile) {
+               return function(e) {
+               // Creamos la imagen.
+               $('#'+insert).siblings('.imgContext').addClass('disabled')
+                      $("#"+insert).html( ['<div class="imgMoreLabel"><img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/></div>'].join(''))
+               	$('#'+insert).siblings('.delete').addClass('active')
+               };
+           })(f);
+ 
+           reader.readAsDataURL(f);
+       }
+}       
+function borrarArchivo(e){
+	var $input = $(this).parent().attr('for')
+	$('#'+$input).val('')
+	e.stopPropagation()
+	e.preventDefault()
+	$(this).removeClass('active').siblings('.imgContext').removeClass('disabled')
+	$(this).siblings().find('.imgPrimaryLabel').html('')
+	$(this).siblings().find('.imgMoreLabel').html('')
+
+}  
+      $('#imgPrimary').change(archivo);
+      $('.moreImgLoad').change(archivo2);
+      $('.delete').click(borrarArchivo);
